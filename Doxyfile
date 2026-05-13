@@ -1,0 +1,12 @@
+PROJECT_NAME           = "Async Task Scheduler"
+OUTPUT_DIRECTORY       = docs/api
+INPUT                  = include/
+RECURSIVE              = YES
+GENERATE_LATEX         = NO
+GENERATE_XML           = YES
+GENERATE_HTML          = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+FILE_PATTERNS          = *.hpp *.cpp
+WARN_IF_UNDOCUMENTED   = NO
