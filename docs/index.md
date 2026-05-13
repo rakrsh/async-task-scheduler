@@ -2,7 +2,6 @@
 
 [![C++20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)](https://isocpp.org/std/the-standard)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Docs](https://github.com/rakrsh/async-task-scheduler/actions/workflows/deploy-docs.yml/badge.svg)](https://rakrsh.github.io/async-task-scheduler/)
 
 A thread-safe, work-stealing executor implemented in modern C++20. Designed for low-latency systems like High-Frequency Trading (HFT) and Automotive applications.
 
@@ -15,25 +14,10 @@ A thread-safe, work-stealing executor implemented in modern C++20. Designed for 
 - **Performance Validated**: Integrated Google Benchmark suite for rigorous performance analysis.
 
 ## 📚 Documentation
-The documentation is available in a deployable format using **MkDocs**.
-
-- [**User Guide**](docs/user-guide.md): Detailed installation and usage.
-- [**Architecture**](docs/architecture.md): Internal design and component overview.
-- [**AI Agent Manual**](docs/agent-manual.md): Guide for AI assistants.
-
-### Viewing Documentation Locally
-To serve the documentation locally with live-reload:
-```powershell
-pip install -r docs/requirements.txt
-mkdocs serve
-```
-Then open `http://127.0.0.1:8000` in your browser.
-
-### Building for Deployment
-```powershell
-mkdocs build
-```
-The static site will be generated in the `site/` directory.
+- [**User Guide**](user-guide.md): Detailed installation, configuration, and usage instructions.
+- [**Architecture**](architecture.md): Internal design and component overview.
+- [**AI Agent Manual**](agent-manual.md): Guide for AI assistants working on this codebase.
+- [**Copilot Instructions**](copilot.md): Project-specific coding standards for GitHub Copilot.
 
 ## 🛠️ Quick Start
 
