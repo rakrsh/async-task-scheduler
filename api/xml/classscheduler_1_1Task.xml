@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classscheduler_1_1Task" kind="class" language="C++" prot="public">
+    <compoundname>scheduler::Task</compoundname>
+    <includes refid="task_8hpp" local="no">task.hpp</includes>
+    <innerclass refid="structscheduler_1_1Task_1_1promise__type" prot="public">scheduler::Task::promise_type</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classscheduler_1_1Task_1a3d86e89752d53eeef8021be5702c3fa3" prot="private" static="no" mutable="no">
+        <type>std::coroutine_handle&lt; <ref refid="structscheduler_1_1Task_1_1promise__type" kindref="compound">promise_type</ref> &gt;</type>
+        <definition>std::coroutine_handle&lt;promise_type&gt; scheduler::Task::handle_</definition>
+        <argsstring></argsstring>
+        <name>handle_</name>
+        <qualifiedname>scheduler::Task::handle_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="67" column="27" bodyfile="include/scheduler/task.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classscheduler_1_1Task_1ac8802057d378f1b4ad88536db199cf3d" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>scheduler::Task::Task</definition>
+        <argsstring>(std::coroutine_handle&lt; promise_type &gt; handle)</argsstring>
+        <name>Task</name>
+        <qualifiedname>scheduler::Task::Task</qualifiedname>
+        <param>
+          <type>std::coroutine_handle&lt; <ref refid="structscheduler_1_1Task_1_1promise__type" kindref="compound">promise_type</ref> &gt;</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="26" column="14" bodyfile="include/scheduler/task.hpp" bodystart="26" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Task_1abeca303b6b152796149f6cd9b420e49f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>scheduler::Task::~Task</definition>
+        <argsstring>()</argsstring>
+        <name>~Task</name>
+        <qualifiedname>scheduler::Task::~Task</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="29" column="5" bodyfile="include/scheduler/task.hpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Task_1a9adf5b02468fc46013a1604cef7a15e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>scheduler::Task::Task</definition>
+        <argsstring>(const Task &amp;)=delete</argsstring>
+        <name>Task</name>
+        <qualifiedname>scheduler::Task::Task</qualifiedname>
+        <param>
+          <type>const <ref refid="classscheduler_1_1Task" kindref="compound">Task</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="33" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Task_1a3758dee2adb4ba129c843042e2df41b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classscheduler_1_1Task" kindref="compound">Task</ref> &amp;</type>
+        <definition>Task &amp; scheduler::Task::operator=</definition>
+        <argsstring>(const Task &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>scheduler::Task::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classscheduler_1_1Task" kindref="compound">Task</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="34" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Task_1a5ac89fa642a99e982647d46385cb2a46" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>scheduler::Task::Task</definition>
+        <argsstring>(Task &amp;&amp;other) noexcept</argsstring>
+        <name>Task</name>
+        <qualifiedname>scheduler::Task::Task</qualifiedname>
+        <param>
+          <type><ref refid="classscheduler_1_1Task" kindref="compound">Task</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="36" column="5" bodyfile="include/scheduler/task.hpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Task_1a6d558087fbb759a03e6faf9a0a4be1d1" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classscheduler_1_1Task" kindref="compound">Task</ref> &amp;</type>
+        <definition>Task &amp; scheduler::Task::operator=</definition>
+        <argsstring>(Task &amp;&amp;other) noexcept</argsstring>
+        <name>operator=</name>
+        <qualifiedname>scheduler::Task::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classscheduler_1_1Task" kindref="compound">Task</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="40" column="10" bodyfile="include/scheduler/task.hpp" bodystart="40" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Task_1a4bc9133beeefb258806444039be4505b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scheduler::Task::resume</definition>
+        <argsstring>()</argsstring>
+        <name>resume</name>
+        <qualifiedname>scheduler::Task::resume</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="49" column="10" bodyfile="include/scheduler/task.hpp" bodystart="49" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Task_1a384edfb55eb60a03c3d78fb5c9fc0608" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scheduler::Task::done</definition>
+        <argsstring>() const</argsstring>
+        <name>done</name>
+        <qualifiedname>scheduler::Task::done</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="57" column="10" bodyfile="include/scheduler/task.hpp" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Task_1a5e698ed7094e6df5f0a21e43f6b4fec9" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scheduler::Task::await_ready</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>await_ready</name>
+        <qualifiedname>scheduler::Task::await_ready</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="60" column="10" bodyfile="include/scheduler/task.hpp" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Task_1ac6a8eaa68b02ae463cf79f642a02ed1c" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduler::Task::await_suspend</definition>
+        <argsstring>(std::coroutine_handle&lt;&gt; awaiting_handle) noexcept</argsstring>
+        <name>await_suspend</name>
+        <qualifiedname>scheduler::Task::await_suspend</qualifiedname>
+        <param>
+          <type>std::coroutine_handle&lt;&gt;</type>
+          <declname>awaiting_handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="61" column="10" bodyfile="include/scheduler/task.hpp" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Task_1a003ead8a862a5f6612c5a7844f731e60" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduler::Task::await_resume</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>await_resume</name>
+        <qualifiedname>scheduler::Task::await_resume</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="64" column="10" bodyfile="include/scheduler/task.hpp" bodystart="64" bodyend="64"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A basic C++20 Coroutine <ref refid="classscheduler_1_1Task" kindref="compound">Task</ref> wrapper. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class represents a unit of work that can be suspended and resumed. </para>
+    </detaileddescription>
+    <location file="include/scheduler/task.hpp" line="14" column="1" bodyfile="include/scheduler/task.hpp" bodystart="14" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classscheduler_1_1Task_1a5e698ed7094e6df5f0a21e43f6b4fec9" prot="public" virt="non-virtual"><scope>scheduler::Task</scope><name>await_ready</name></member>
+      <member refid="classscheduler_1_1Task_1a003ead8a862a5f6612c5a7844f731e60" prot="public" virt="non-virtual"><scope>scheduler::Task</scope><name>await_resume</name></member>
+      <member refid="classscheduler_1_1Task_1ac6a8eaa68b02ae463cf79f642a02ed1c" prot="public" virt="non-virtual"><scope>scheduler::Task</scope><name>await_suspend</name></member>
+      <member refid="classscheduler_1_1Task_1a384edfb55eb60a03c3d78fb5c9fc0608" prot="public" virt="non-virtual"><scope>scheduler::Task</scope><name>done</name></member>
+      <member refid="classscheduler_1_1Task_1a3d86e89752d53eeef8021be5702c3fa3" prot="private" virt="non-virtual"><scope>scheduler::Task</scope><name>handle_</name></member>
+      <member refid="classscheduler_1_1Task_1a3758dee2adb4ba129c843042e2df41b1" prot="public" virt="non-virtual"><scope>scheduler::Task</scope><name>operator=</name></member>
+      <member refid="classscheduler_1_1Task_1a6d558087fbb759a03e6faf9a0a4be1d1" prot="public" virt="non-virtual"><scope>scheduler::Task</scope><name>operator=</name></member>
+      <member refid="classscheduler_1_1Task_1a4bc9133beeefb258806444039be4505b" prot="public" virt="non-virtual"><scope>scheduler::Task</scope><name>resume</name></member>
+      <member refid="classscheduler_1_1Task_1ac8802057d378f1b4ad88536db199cf3d" prot="public" virt="non-virtual"><scope>scheduler::Task</scope><name>Task</name></member>
+      <member refid="classscheduler_1_1Task_1a9adf5b02468fc46013a1604cef7a15e2" prot="public" virt="non-virtual"><scope>scheduler::Task</scope><name>Task</name></member>
+      <member refid="classscheduler_1_1Task_1a5ac89fa642a99e982647d46385cb2a46" prot="public" virt="non-virtual"><scope>scheduler::Task</scope><name>Task</name></member>
+      <member refid="classscheduler_1_1Task_1abeca303b6b152796149f6cd9b420e49f" prot="public" virt="non-virtual"><scope>scheduler::Task</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

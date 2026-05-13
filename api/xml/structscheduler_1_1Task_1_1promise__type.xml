@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structscheduler_1_1Task_1_1promise__type" kind="struct" language="C++" prot="public">
+    <compoundname>scheduler::Task::promise_type</compoundname>
+    <includes refid="task_8hpp" local="no">task.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structscheduler_1_1Task_1_1promise__type_1a579814308582ecc3a6ab1cb221913353" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classscheduler_1_1Task" kindref="compound">Task</ref></type>
+        <definition>Task scheduler::Task::promise_type::get_return_object</definition>
+        <argsstring>()</argsstring>
+        <name>get_return_object</name>
+        <qualifiedname>scheduler::Task::promise_type::get_return_object</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="17" column="14" bodyfile="include/scheduler/task.hpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="structscheduler_1_1Task_1_1promise__type_1a1634da40059aa6c391944dbd5a168c9f" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::initial_suspend</type>
+        <definition>std::initial_suspend scheduler::Task::promise_type::initial_suspend</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>initial_suspend</name>
+        <qualifiedname>scheduler::Task::promise_type::initial_suspend</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="20" column="30" bodyfile="include/scheduler/task.hpp" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="structscheduler_1_1Task_1_1promise__type_1a814f67580dda467a24509edf5596c798" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::final_suspend</type>
+        <definition>std::final_suspend scheduler::Task::promise_type::final_suspend</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>final_suspend</name>
+        <qualifiedname>scheduler::Task::promise_type::final_suspend</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="21" column="28" bodyfile="include/scheduler/task.hpp" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="structscheduler_1_1Task_1_1promise__type_1ae271e801e15d2ce3d8dadc98c9543a3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduler::Task::promise_type::return_void</definition>
+        <argsstring>()</argsstring>
+        <name>return_void</name>
+        <qualifiedname>scheduler::Task::promise_type::return_void</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="22" column="14" bodyfile="include/scheduler/task.hpp" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="structscheduler_1_1Task_1_1promise__type_1a30d9bd92956a9654b527006d0bf5ba61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduler::Task::promise_type::unhandled_exception</definition>
+        <argsstring>()</argsstring>
+        <name>unhandled_exception</name>
+        <qualifiedname>scheduler::Task::promise_type::unhandled_exception</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/task.hpp" line="23" column="14" bodyfile="include/scheduler/task.hpp" bodystart="23" bodyend="23"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/scheduler/task.hpp" line="16" column="5" bodyfile="include/scheduler/task.hpp" bodystart="16" bodyend="24"/>
+    <listofallmembers>
+      <member refid="structscheduler_1_1Task_1_1promise__type_1a814f67580dda467a24509edf5596c798" prot="public" virt="non-virtual"><scope>scheduler::Task::promise_type</scope><name>final_suspend</name></member>
+      <member refid="structscheduler_1_1Task_1_1promise__type_1a579814308582ecc3a6ab1cb221913353" prot="public" virt="non-virtual"><scope>scheduler::Task::promise_type</scope><name>get_return_object</name></member>
+      <member refid="structscheduler_1_1Task_1_1promise__type_1a1634da40059aa6c391944dbd5a168c9f" prot="public" virt="non-virtual"><scope>scheduler::Task::promise_type</scope><name>initial_suspend</name></member>
+      <member refid="structscheduler_1_1Task_1_1promise__type_1ae271e801e15d2ce3d8dadc98c9543a3d" prot="public" virt="non-virtual"><scope>scheduler::Task::promise_type</scope><name>return_void</name></member>
+      <member refid="structscheduler_1_1Task_1_1promise__type_1a30d9bd92956a9654b527006d0bf5ba61" prot="public" virt="non-virtual"><scope>scheduler::Task::promise_type</scope><name>unhandled_exception</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

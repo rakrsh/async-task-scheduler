@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="priority_8hpp" kind="file" language="C++">
+    <compoundname>priority.hpp</compoundname>
+    <includedby refid="worker_8hpp" local="yes">include/scheduler/worker.hpp</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/scheduler/priority.hpp</label>
+        <link refid="priority_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/scheduler/scheduler.hpp</label>
+        <link refid="scheduler_8hpp"/>
+      </node>
+      <node id="2">
+        <label>include/scheduler/worker.hpp</label>
+        <link refid="worker_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacescheduler">scheduler</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacescheduler" kindref="compound">scheduler</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09f" kindref="member">Priority</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09fa655d20c1ca69519ca647684edbb2db35" kindref="member">High</ref>,</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09fa960b44c579bc2f6818d2daaf9e4c16f0" kindref="member">Normal</ref>,</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09fa28d0edd045e05cf5af64e35ae0c4c6ef" kindref="member">Low</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scheduler</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/scheduler/priority.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacescheduler" kind="namespace" language="C++">
+    <compoundname>scheduler</compoundname>
+    <innerclass refid="classscheduler_1_1Scheduler" prot="public">scheduler::Scheduler</innerclass>
+    <innerclass refid="classscheduler_1_1Task" prot="public">scheduler::Task</innerclass>
+    <innerclass refid="classscheduler_1_1Worker" prot="public">scheduler::Worker</innerclass>
+    <innerclass refid="classscheduler_1_1WorkStealingDeque" prot="public">scheduler::WorkStealingDeque</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09f" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Priority</name>
+        <qualifiedname>scheduler::Priority</qualifiedname>
+        <enumvalue id="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09fa655d20c1ca69519ca647684edbb2db35" prot="public">
+          <name>High</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09fa960b44c579bc2f6818d2daaf9e4c16f0" prot="public">
+          <name>Normal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09fa28d0edd045e05cf5af64e35ae0c4c6ef" prot="public">
+          <name>Low</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/priority.hpp" line="5" column="1" bodyfile="include/scheduler/priority.hpp" bodystart="5" bodyend="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/scheduler/deque.hpp" line="9" column="1"/>
+  </compounddef>
+</doxygen>

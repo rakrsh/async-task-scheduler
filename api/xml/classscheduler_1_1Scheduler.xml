@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classscheduler_1_1Scheduler" kind="class" language="C++" prot="public">
+    <compoundname>scheduler::Scheduler</compoundname>
+    <includes refid="scheduler_8hpp" local="no">scheduler.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classscheduler_1_1Scheduler_1a383837e1f1a43507b0fee452470e0283" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classscheduler_1_1Worker" kindref="compound">Worker</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;Worker&gt; &gt; scheduler::Scheduler::workers_</definition>
+        <argsstring></argsstring>
+        <name>workers_</name>
+        <qualifiedname>scheduler::Scheduler::workers_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/scheduler.hpp" line="25" column="17" bodyfile="include/scheduler/scheduler.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classscheduler_1_1Scheduler_1a7074c76cbe59a0e6402e1bf7560759f0" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; size_t &gt;</type>
+        <definition>std::atomic&lt;size_t&gt; scheduler::Scheduler::next_worker_</definition>
+        <argsstring></argsstring>
+        <name>next_worker_</name>
+        <qualifiedname>scheduler::Scheduler::next_worker_</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/scheduler.hpp" line="26" column="17" bodyfile="include/scheduler/scheduler.hpp" bodystart="26" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classscheduler_1_1Scheduler_1a9e8cdeb19339987584a4f3d20a65fc36" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>scheduler::Scheduler::Scheduler</definition>
+        <argsstring>(size_t thread_count=std::thread::hardware_concurrency())</argsstring>
+        <name>Scheduler</name>
+        <qualifiedname>scheduler::Scheduler::Scheduler</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>thread_count</declname>
+          <defval>std::thread::hardware_concurrency()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/scheduler.hpp" line="15" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Scheduler_1a8ea8b4621d2df1ea005ca602c81fa7bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>scheduler::Scheduler::~Scheduler</definition>
+        <argsstring>()</argsstring>
+        <name>~Scheduler</name>
+        <qualifiedname>scheduler::Scheduler::~Scheduler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/scheduler.hpp" line="16" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Scheduler_1a52bbbcd2c3c47b581f40a87af4075e0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduler::Scheduler::schedule</definition>
+        <argsstring>(std::unique_ptr&lt; Task &gt; task, Priority priority=Priority::Normal)</argsstring>
+        <name>schedule</name>
+        <qualifiedname>scheduler::Scheduler::schedule</qualifiedname>
+        <param>
+          <type>std::unique_ptr&lt; <ref refid="classscheduler_1_1Task" kindref="compound">Task</ref> &gt;</type>
+          <declname>task</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09f" kindref="member">Priority</ref></type>
+          <declname>priority</declname>
+          <defval><ref refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09fa960b44c579bc2f6818d2daaf9e4c16f0" kindref="member">Priority::Normal</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/scheduler.hpp" line="18" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Scheduler_1a326cb99cc1bb8b49c405a8f4e49f009c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; std::unique_ptr&lt; <ref refid="classscheduler_1_1Worker" kindref="compound">Worker</ref> &gt; &gt; &amp;</type>
+        <definition>const std::vector&lt; std::unique_ptr&lt; Worker &gt; &gt; &amp; scheduler::Scheduler::workers</definition>
+        <argsstring>() const</argsstring>
+        <name>workers</name>
+        <qualifiedname>scheduler::Scheduler::workers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/scheduler.hpp" line="21" column="23" bodyfile="include/scheduler/scheduler.hpp" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1Scheduler_1a6070f456f70a366fa0ccb27699928be0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t scheduler::Scheduler::thread_count</definition>
+        <argsstring>() const</argsstring>
+        <name>thread_count</name>
+        <qualifiedname>scheduler::Scheduler::thread_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/scheduler.hpp" line="22" column="12" bodyfile="include/scheduler/scheduler.hpp" bodystart="22" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>High-Performance Asynchronous <ref refid="classscheduler_1_1Task" kindref="compound">Task</ref> <ref refid="classscheduler_1_1Scheduler" kindref="compound">Scheduler</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/scheduler/scheduler.hpp" line="13" column="1" bodyfile="include/scheduler/scheduler.hpp" bodystart="13" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classscheduler_1_1Scheduler_1a7074c76cbe59a0e6402e1bf7560759f0" prot="private" virt="non-virtual"><scope>scheduler::Scheduler</scope><name>next_worker_</name></member>
+      <member refid="classscheduler_1_1Scheduler_1a52bbbcd2c3c47b581f40a87af4075e0d" prot="public" virt="non-virtual"><scope>scheduler::Scheduler</scope><name>schedule</name></member>
+      <member refid="classscheduler_1_1Scheduler_1a9e8cdeb19339987584a4f3d20a65fc36" prot="public" virt="non-virtual"><scope>scheduler::Scheduler</scope><name>Scheduler</name></member>
+      <member refid="classscheduler_1_1Scheduler_1a6070f456f70a366fa0ccb27699928be0" prot="public" virt="non-virtual"><scope>scheduler::Scheduler</scope><name>thread_count</name></member>
+      <member refid="classscheduler_1_1Scheduler_1a326cb99cc1bb8b49c405a8f4e49f009c" prot="public" virt="non-virtual"><scope>scheduler::Scheduler</scope><name>workers</name></member>
+      <member refid="classscheduler_1_1Scheduler_1a383837e1f1a43507b0fee452470e0283" prot="private" virt="non-virtual"><scope>scheduler::Scheduler</scope><name>workers_</name></member>
+      <member refid="classscheduler_1_1Scheduler_1a8ea8b4621d2df1ea005ca602c81fa7bb" prot="public" virt="non-virtual"><scope>scheduler::Scheduler</scope><name>~Scheduler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

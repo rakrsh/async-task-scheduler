@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="worker_8hpp" kind="file" language="C++">
+    <compoundname>worker.hpp</compoundname>
+    <includes refid="deque_8hpp" local="yes">deque.hpp</includes>
+    <includes refid="priority_8hpp" local="yes">priority.hpp</includes>
+    <includes local="no">thread</includes>
+    <includes local="no">atomic</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">functional</includes>
+    <includedby refid="scheduler_8hpp" local="yes">include/scheduler/scheduler.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>deque.hpp</label>
+        <link refid="deque_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>priority.hpp</label>
+        <link refid="priority_8hpp"/>
+      </node>
+      <node id="3">
+        <label>task.hpp</label>
+        <link refid="task_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/scheduler/worker.hpp</label>
+        <link refid="worker_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>atomic</label>
+      </node>
+      <node id="4">
+        <label>coroutine</label>
+      </node>
+      <node id="7">
+        <label>deque</label>
+      </node>
+      <node id="6">
+        <label>exception</label>
+      </node>
+      <node id="14">
+        <label>functional</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+      <node id="8">
+        <label>mutex</label>
+      </node>
+      <node id="9">
+        <label>optional</label>
+      </node>
+      <node id="11">
+        <label>thread</label>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/scheduler/scheduler.hpp</label>
+        <link refid="scheduler_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/scheduler/worker.hpp</label>
+        <link refid="worker_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classscheduler_1_1Worker" prot="public">scheduler::Worker</innerclass>
+    <innernamespace refid="namespacescheduler">scheduler</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="deque_8hpp" kindref="compound">deque.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="priority_8hpp" kindref="compound">priority.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;atomic&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacescheduler" kindref="compound">scheduler</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Scheduler;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classscheduler_1_1Worker" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classscheduler_1_1Worker" kindref="compound">Worker</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19" refid="classscheduler_1_1Worker_1ad6b2013dbbbdb4de683cff471099a200" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classscheduler_1_1Worker_1ad6b2013dbbbdb4de683cff471099a200" kindref="member">Worker</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/><ref refid="classscheduler_1_1Scheduler" kindref="compound">Scheduler</ref>&amp;<sp/><ref refid="namespacescheduler" kindref="compound">scheduler</ref>);</highlight></codeline>
+<codeline lineno="20" refid="classscheduler_1_1Worker_1a61f00e2aa166d62572c5dca9bfbc250e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classscheduler_1_1Worker_1a61f00e2aa166d62572c5dca9bfbc250e" kindref="member">~Worker</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Disable<sp/>copy/move</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classscheduler_1_1Worker_1a17182e211a7f6ef7e1eb058ac801f8bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classscheduler_1_1Worker_1a17182e211a7f6ef7e1eb058ac801f8bf" kindref="member">Worker</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classscheduler_1_1Worker" kindref="compound">Worker</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24" refid="classscheduler_1_1Worker_1af4d9510d50a1ed4f78e927120ffa3fba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classscheduler_1_1Worker" kindref="compound">Worker</ref>&amp;<sp/><ref refid="classscheduler_1_1Worker_1af4d9510d50a1ed4f78e927120ffa3fba" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classscheduler_1_1Worker" kindref="compound">Worker</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classscheduler_1_1Worker_1a006219ced522df7c827450dd2fd3ca49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classscheduler_1_1Worker_1a006219ced522df7c827450dd2fd3ca49" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="27" refid="classscheduler_1_1Worker_1a6e05df6f49d32553edaedc4d41c81c20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classscheduler_1_1Worker_1a6e05df6f49d32553edaedc4d41c81c20" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classscheduler_1_1Worker_1acda6b9d3bf279480d03c644118c74ba5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classscheduler_1_1Worker_1acda6b9d3bf279480d03c644118c74ba5" kindref="member">push</ref>(std::unique_ptr&lt;Task&gt;<sp/>task,<sp/><ref refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09f" kindref="member">Priority</ref><sp/>priority);</highlight></codeline>
+<codeline lineno="30" refid="classscheduler_1_1Worker_1ab4a8f917e6ba37b3e1ea6c34374f15bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Task&gt;<sp/><ref refid="classscheduler_1_1Worker_1ab4a8f917e6ba37b3e1ea6c34374f15bf" kindref="member">steal</ref>(<ref refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09f" kindref="member">Priority</ref><sp/>priority);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classscheduler_1_1Worker_1ab8fa1bb29286c1e42c557ae621e674a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classscheduler_1_1Worker_1ab8fa1bb29286c1e42c557ae621e674a1" kindref="member">id</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>id_;<sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>run();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Task&gt;<sp/>try_pop_local();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Task&gt;<sp/>try_steal();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>id_;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classscheduler_1_1Scheduler" kindref="compound">Scheduler</ref>&amp;<sp/>scheduler_;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>std::thread<sp/>thread_;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>std::atomic&lt;bool&gt;<sp/>running_{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Separate<sp/>deques<sp/>for<sp/>different<sp/>priorities<sp/>to<sp/>ensure<sp/>multi-level<sp/>feedback<sp/>or<sp/>simple<sp/>priority<sp/>handling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>WorkStealingDeque<sp/>high_priority_queue_;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>WorkStealingDeque<sp/>normal_priority_queue_;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>WorkStealingDeque<sp/>low_priority_queue_;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scheduler</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/scheduler/worker.hpp"/>
+  </compounddef>
+</doxygen>

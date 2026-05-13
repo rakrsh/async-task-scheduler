@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classscheduler_1_1WorkStealingDeque" kind="class" language="C++" prot="public">
+    <compoundname>scheduler::WorkStealingDeque</compoundname>
+    <includes refid="deque_8hpp" local="no">deque.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classscheduler_1_1WorkStealingDeque_1a9e7cd17cce9fe473805953bc0050ca08" prot="private" static="no" mutable="yes">
+        <type>std::mutex</type>
+        <definition>std::mutex scheduler::WorkStealingDeque::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <qualifiedname>scheduler::WorkStealingDeque::mutex_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/deque.hpp" line="55" column="24" bodyfile="include/scheduler/deque.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classscheduler_1_1WorkStealingDeque_1afb35f9ff7a39b506b9e21b990fb56d46" prot="private" static="no" mutable="no">
+        <type>std::deque&lt; std::unique_ptr&lt; <ref refid="classscheduler_1_1Task" kindref="compound">Task</ref> &gt; &gt;</type>
+        <definition>std::deque&lt;std::unique_ptr&lt;Task&gt; &gt; scheduler::WorkStealingDeque::deque_</definition>
+        <argsstring></argsstring>
+        <name>deque_</name>
+        <qualifiedname>scheduler::WorkStealingDeque::deque_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/deque.hpp" line="56" column="16" bodyfile="include/scheduler/deque.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classscheduler_1_1WorkStealingDeque_1a55a4177c0eb7583c7912570d582051b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduler::WorkStealingDeque::push</definition>
+        <argsstring>(std::unique_ptr&lt; Task &gt; task)</argsstring>
+        <name>push</name>
+        <qualifiedname>scheduler::WorkStealingDeque::push</qualifiedname>
+        <param>
+          <type>std::unique_ptr&lt; <ref refid="classscheduler_1_1Task" kindref="compound">Task</ref> &gt;</type>
+          <declname>task</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/deque.hpp" line="19" column="10" bodyfile="include/scheduler/deque.hpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1WorkStealingDeque_1a8159256d63e6c83f7c20f68516fcd15d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classscheduler_1_1Task" kindref="compound">Task</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; Task &gt; scheduler::WorkStealingDeque::pop</definition>
+        <argsstring>()</argsstring>
+        <name>pop</name>
+        <qualifiedname>scheduler::WorkStealingDeque::pop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/deque.hpp" line="24" column="21" bodyfile="include/scheduler/deque.hpp" bodystart="24" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1WorkStealingDeque_1adb9ec4de2ac4ac729e181a983da9b7f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classscheduler_1_1Task" kindref="compound">Task</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; Task &gt; scheduler::WorkStealingDeque::steal</definition>
+        <argsstring>()</argsstring>
+        <name>steal</name>
+        <qualifiedname>scheduler::WorkStealingDeque::steal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/deque.hpp" line="34" column="21" bodyfile="include/scheduler/deque.hpp" bodystart="34" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1WorkStealingDeque_1ab56b347c0dea5a1cbc81898a3ac569ce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool scheduler::WorkStealingDeque::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <qualifiedname>scheduler::WorkStealingDeque::empty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/deque.hpp" line="44" column="10" bodyfile="include/scheduler/deque.hpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1WorkStealingDeque_1a1fcc23fbff6e1bc68267b6f160877447" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t scheduler::WorkStealingDeque::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>scheduler::WorkStealingDeque::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/deque.hpp" line="49" column="12" bodyfile="include/scheduler/deque.hpp" bodystart="49" bodyend="52"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A thread-safe deque supporting work-stealing. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The owner thread pushes and pops from the front. Stealer threads pop from the back. </para>
+    </detaileddescription>
+    <location file="include/scheduler/deque.hpp" line="17" column="1" bodyfile="include/scheduler/deque.hpp" bodystart="17" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classscheduler_1_1WorkStealingDeque_1afb35f9ff7a39b506b9e21b990fb56d46" prot="private" virt="non-virtual"><scope>scheduler::WorkStealingDeque</scope><name>deque_</name></member>
+      <member refid="classscheduler_1_1WorkStealingDeque_1ab56b347c0dea5a1cbc81898a3ac569ce" prot="public" virt="non-virtual"><scope>scheduler::WorkStealingDeque</scope><name>empty</name></member>
+      <member refid="classscheduler_1_1WorkStealingDeque_1a9e7cd17cce9fe473805953bc0050ca08" prot="private" virt="non-virtual"><scope>scheduler::WorkStealingDeque</scope><name>mutex_</name></member>
+      <member refid="classscheduler_1_1WorkStealingDeque_1a8159256d63e6c83f7c20f68516fcd15d" prot="public" virt="non-virtual"><scope>scheduler::WorkStealingDeque</scope><name>pop</name></member>
+      <member refid="classscheduler_1_1WorkStealingDeque_1a55a4177c0eb7583c7912570d582051b2" prot="public" virt="non-virtual"><scope>scheduler::WorkStealingDeque</scope><name>push</name></member>
+      <member refid="classscheduler_1_1WorkStealingDeque_1a1fcc23fbff6e1bc68267b6f160877447" prot="public" virt="non-virtual"><scope>scheduler::WorkStealingDeque</scope><name>size</name></member>
+      <member refid="classscheduler_1_1WorkStealingDeque_1adb9ec4de2ac4ac729e181a983da9b7f4" prot="public" virt="non-virtual"><scope>scheduler::WorkStealingDeque</scope><name>steal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="structscheduler_1_1Task_1_1promise__type" kind="struct"><name>scheduler::Task::promise_type</name>
+    <member refid="structscheduler_1_1Task_1_1promise__type_1a579814308582ecc3a6ab1cb221913353" kind="function"><name>get_return_object</name></member>
+    <member refid="structscheduler_1_1Task_1_1promise__type_1a1634da40059aa6c391944dbd5a168c9f" kind="function"><name>initial_suspend</name></member>
+    <member refid="structscheduler_1_1Task_1_1promise__type_1a814f67580dda467a24509edf5596c798" kind="function"><name>final_suspend</name></member>
+    <member refid="structscheduler_1_1Task_1_1promise__type_1ae271e801e15d2ce3d8dadc98c9543a3d" kind="function"><name>return_void</name></member>
+    <member refid="structscheduler_1_1Task_1_1promise__type_1a30d9bd92956a9654b527006d0bf5ba61" kind="function"><name>unhandled_exception</name></member>
+  </compound>
+  <compound refid="classscheduler_1_1Scheduler" kind="class"><name>scheduler::Scheduler</name>
+    <member refid="classscheduler_1_1Scheduler_1a383837e1f1a43507b0fee452470e0283" kind="variable"><name>workers_</name></member>
+    <member refid="classscheduler_1_1Scheduler_1a7074c76cbe59a0e6402e1bf7560759f0" kind="variable"><name>next_worker_</name></member>
+    <member refid="classscheduler_1_1Scheduler_1a9e8cdeb19339987584a4f3d20a65fc36" kind="function"><name>Scheduler</name></member>
+    <member refid="classscheduler_1_1Scheduler_1a8ea8b4621d2df1ea005ca602c81fa7bb" kind="function"><name>~Scheduler</name></member>
+    <member refid="classscheduler_1_1Scheduler_1a52bbbcd2c3c47b581f40a87af4075e0d" kind="function"><name>schedule</name></member>
+    <member refid="classscheduler_1_1Scheduler_1a326cb99cc1bb8b49c405a8f4e49f009c" kind="function"><name>workers</name></member>
+    <member refid="classscheduler_1_1Scheduler_1a6070f456f70a366fa0ccb27699928be0" kind="function"><name>thread_count</name></member>
+  </compound>
+  <compound refid="classscheduler_1_1Task" kind="class"><name>scheduler::Task</name>
+    <member refid="classscheduler_1_1Task_1a3d86e89752d53eeef8021be5702c3fa3" kind="variable"><name>handle_</name></member>
+    <member refid="classscheduler_1_1Task_1ac8802057d378f1b4ad88536db199cf3d" kind="function"><name>Task</name></member>
+    <member refid="classscheduler_1_1Task_1abeca303b6b152796149f6cd9b420e49f" kind="function"><name>~Task</name></member>
+    <member refid="classscheduler_1_1Task_1a9adf5b02468fc46013a1604cef7a15e2" kind="function"><name>Task</name></member>
+    <member refid="classscheduler_1_1Task_1a3758dee2adb4ba129c843042e2df41b1" kind="function"><name>operator=</name></member>
+    <member refid="classscheduler_1_1Task_1a5ac89fa642a99e982647d46385cb2a46" kind="function"><name>Task</name></member>
+    <member refid="classscheduler_1_1Task_1a6d558087fbb759a03e6faf9a0a4be1d1" kind="function"><name>operator=</name></member>
+    <member refid="classscheduler_1_1Task_1a4bc9133beeefb258806444039be4505b" kind="function"><name>resume</name></member>
+    <member refid="classscheduler_1_1Task_1a384edfb55eb60a03c3d78fb5c9fc0608" kind="function"><name>done</name></member>
+    <member refid="classscheduler_1_1Task_1a5e698ed7094e6df5f0a21e43f6b4fec9" kind="function"><name>await_ready</name></member>
+    <member refid="classscheduler_1_1Task_1ac6a8eaa68b02ae463cf79f642a02ed1c" kind="function"><name>await_suspend</name></member>
+    <member refid="classscheduler_1_1Task_1a003ead8a862a5f6612c5a7844f731e60" kind="function"><name>await_resume</name></member>
+  </compound>
+  <compound refid="classscheduler_1_1Worker" kind="class"><name>scheduler::Worker</name>
+    <member refid="classscheduler_1_1Worker_1a585455cb21b51b903d2e6dc5754c3868" kind="variable"><name>id_</name></member>
+    <member refid="classscheduler_1_1Worker_1abc818e432207c9c57f61e15b5e3b38b2" kind="variable"><name>scheduler_</name></member>
+    <member refid="classscheduler_1_1Worker_1adf345c43e7652c73e4a6ff9905ae5c70" kind="variable"><name>thread_</name></member>
+    <member refid="classscheduler_1_1Worker_1a28ff8c73540ef5c72ec653c797194cf9" kind="variable"><name>running_</name></member>
+    <member refid="classscheduler_1_1Worker_1ab4073f3fa243914f22789b24aa9b72dd" kind="variable"><name>high_priority_queue_</name></member>
+    <member refid="classscheduler_1_1Worker_1ad88f4a8b650f4868e378edf3168a3fec" kind="variable"><name>normal_priority_queue_</name></member>
+    <member refid="classscheduler_1_1Worker_1a92ca2d9c4c753b985cd6c75b3f66d86d" kind="variable"><name>low_priority_queue_</name></member>
+    <member refid="classscheduler_1_1Worker_1ad6b2013dbbbdb4de683cff471099a200" kind="function"><name>Worker</name></member>
+    <member refid="classscheduler_1_1Worker_1a61f00e2aa166d62572c5dca9bfbc250e" kind="function"><name>~Worker</name></member>
+    <member refid="classscheduler_1_1Worker_1a17182e211a7f6ef7e1eb058ac801f8bf" kind="function"><name>Worker</name></member>
+    <member refid="classscheduler_1_1Worker_1af4d9510d50a1ed4f78e927120ffa3fba" kind="function"><name>operator=</name></member>
+    <member refid="classscheduler_1_1Worker_1a006219ced522df7c827450dd2fd3ca49" kind="function"><name>start</name></member>
+    <member refid="classscheduler_1_1Worker_1a6e05df6f49d32553edaedc4d41c81c20" kind="function"><name>stop</name></member>
+    <member refid="classscheduler_1_1Worker_1acda6b9d3bf279480d03c644118c74ba5" kind="function"><name>push</name></member>
+    <member refid="classscheduler_1_1Worker_1ab4a8f917e6ba37b3e1ea6c34374f15bf" kind="function"><name>steal</name></member>
+    <member refid="classscheduler_1_1Worker_1ab8fa1bb29286c1e42c557ae621e674a1" kind="function"><name>id</name></member>
+    <member refid="classscheduler_1_1Worker_1aa5bc453409e7f4fa82d8fde8a3d8b0ef" kind="function"><name>run</name></member>
+    <member refid="classscheduler_1_1Worker_1acdd56f73a63a296c237600d24dbf56fd" kind="function"><name>try_pop_local</name></member>
+    <member refid="classscheduler_1_1Worker_1ae4e015a4cb7ca5c7a7344c2f7f7df3d8" kind="function"><name>try_steal</name></member>
+  </compound>
+  <compound refid="classscheduler_1_1WorkStealingDeque" kind="class"><name>scheduler::WorkStealingDeque</name>
+    <member refid="classscheduler_1_1WorkStealingDeque_1a9e7cd17cce9fe473805953bc0050ca08" kind="variable"><name>mutex_</name></member>
+    <member refid="classscheduler_1_1WorkStealingDeque_1afb35f9ff7a39b506b9e21b990fb56d46" kind="variable"><name>deque_</name></member>
+    <member refid="classscheduler_1_1WorkStealingDeque_1a55a4177c0eb7583c7912570d582051b2" kind="function"><name>push</name></member>
+    <member refid="classscheduler_1_1WorkStealingDeque_1a8159256d63e6c83f7c20f68516fcd15d" kind="function"><name>pop</name></member>
+    <member refid="classscheduler_1_1WorkStealingDeque_1adb9ec4de2ac4ac729e181a983da9b7f4" kind="function"><name>steal</name></member>
+    <member refid="classscheduler_1_1WorkStealingDeque_1ab56b347c0dea5a1cbc81898a3ac569ce" kind="function"><name>empty</name></member>
+    <member refid="classscheduler_1_1WorkStealingDeque_1a1fcc23fbff6e1bc68267b6f160877447" kind="function"><name>size</name></member>
+  </compound>
+  <compound refid="namespacescheduler" kind="namespace"><name>scheduler</name>
+    <member refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09f" kind="enum"><name>Priority</name></member>
+    <member refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09fa655d20c1ca69519ca647684edbb2db35" kind="enumvalue"><name>High</name></member>
+    <member refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09fa960b44c579bc2f6818d2daaf9e4c16f0" kind="enumvalue"><name>Normal</name></member>
+    <member refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09fa28d0edd045e05cf5af64e35ae0c4c6ef" kind="enumvalue"><name>Low</name></member>
+  </compound>
+  <compound refid="deque_8hpp" kind="file"><name>deque.hpp</name>
+  </compound>
+  <compound refid="priority_8hpp" kind="file"><name>priority.hpp</name>
+  </compound>
+  <compound refid="scheduler_8hpp" kind="file"><name>scheduler.hpp</name>
+  </compound>
+  <compound refid="task_8hpp" kind="file"><name>task.hpp</name>
+  </compound>
+  <compound refid="worker_8hpp" kind="file"><name>worker.hpp</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_c4d5192c5250eabbe8e7ab0ad97d8a96" kind="dir"><name>include/scheduler</name>
+  </compound>
+</doxygenindex>
