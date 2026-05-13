@@ -1,0 +1,8 @@
+{
+  "name": "async-task-scheduler",
+  "version-string": "0.1.0",
+  "dependencies": [
+    "benchmark",
+    "gtest"
+  ]
+}
