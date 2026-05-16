@@ -153,11 +153,12 @@ function Setup-Vcpkg {
 function Install-CppDependencies {
     Write-Header "Installing C++ Dependencies"
     
-    $vcpkgPath = "vcpkg"
+    $vcpkgPath = Join-Path (Get-Location) "vcpkg\vcpkg.exe"
     if (-not (Test-Path $vcpkgPath)) {
         if (-not (Setup-Vcpkg)) {
             return $false
         }
+        $vcpkgPath = Join-Path (Get-Location) "vcpkg\vcpkg.exe"
     }
     
     Write-Info "Installing dependencies via vcpkg..."
