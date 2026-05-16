@@ -78,6 +78,18 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscheduler_1_1IMetricsCollector.html">IMetricsCollector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metrics collector interface for scheduler monitoring.  <a href="classscheduler_1_1IMetricsCollector.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscheduler_1_1MetricsCollectorImpl.html">MetricsCollectorImpl</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Example implementation of <a class="el" href="classscheduler_1_1IMetricsCollector.html" title="Metrics collector interface for scheduler monitoring.">IMetricsCollector</a>.  <a href="classscheduler_1_1MetricsCollectorImpl.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscheduler_1_1PerformanceMetrics.html">PerformanceMetrics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performance metrics for the scheduler.  <a href="structscheduler_1_1PerformanceMetrics.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscheduler_1_1QueueStatus.html">QueueStatus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global queue status snapshot.  <a href="structscheduler_1_1QueueStatus.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscheduler_1_1Scheduler.html">Scheduler</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">High-Performance Asynchronous <a class="el" href="classscheduler_1_1Task.html" title="A basic C++20 Coroutine Task wrapper.">Task</a> <a class="el" href="classscheduler_1_1Scheduler.html" title="High-Performance Asynchronous Task Scheduler.">Scheduler</a>.  <a href="classscheduler_1_1Scheduler.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -87,12 +99,21 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscheduler_1_1Worker.html">Worker</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a worker thread that executes tasks.  <a href="classscheduler_1_1Worker.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscheduler_1_1WorkerMetrics.html">WorkerMetrics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-worker metrics snapshot.  <a href="structscheduler_1_1WorkerMetrics.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscheduler_1_1WorkStealingDeque.html">WorkStealingDeque</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A thread-safe deque supporting work-stealing.  <a href="classscheduler_1_1WorkStealingDeque.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:ac131b57cde4999e70e412da516a18c01" id="r_ac131b57cde4999e70e412da516a18c01"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacescheduler.html#ac131b57cde4999e70e412da516a18c01">WorkerStatus</a> { <a class="el" href="namespacescheduler.html#ac131b57cde4999e70e412da516a18c01a4d3d769b812b6faa6b76e1a8abaece2d">Active</a>
+, <a class="el" href="namespacescheduler.html#ac131b57cde4999e70e412da516a18c01ae599161956d626eda4cb0a5ffb85271c">Idle</a>
+, <a class="el" href="namespacescheduler.html#ac131b57cde4999e70e412da516a18c01a8bf906833cc7aea8084f552217ed9c1d">Suspended</a>
+ }</td></tr>
+<tr class="memdesc:ac131b57cde4999e70e412da516a18c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration for worker status.  <a href="namespacescheduler.html#ac131b57cde4999e70e412da516a18c01">More...</a><br /></td></tr>
+<tr class="separator:ac131b57cde4999e70e412da516a18c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6020eef42dbfa7acacbb93325b9bc09f" id="r_a6020eef42dbfa7acacbb93325b9bc09f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacescheduler.html#a6020eef42dbfa7acacbb93325b9bc09f">Priority</a> { <a class="el" href="namespacescheduler.html#a6020eef42dbfa7acacbb93325b9bc09fa655d20c1ca69519ca647684edbb2db35">High</a>
 , <a class="el" href="namespacescheduler.html#a6020eef42dbfa7acacbb93325b9bc09fa960b44c579bc2f6818d2daaf9e4c16f0">Normal</a>
 , <a class="el" href="namespacescheduler.html#a6020eef42dbfa7acacbb93325b9bc09fa28d0edd045e05cf5af64e35ae0c4c6ef">Low</a>
@@ -123,6 +144,38 @@ Enumerations</h2></td></tr>
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6020eef42dbfa7acacbb93325b9bc09fa655d20c1ca69519ca647684edbb2db35" name="a6020eef42dbfa7acacbb93325b9bc09fa655d20c1ca69519ca647684edbb2db35"></a>High&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6020eef42dbfa7acacbb93325b9bc09fa960b44c579bc2f6818d2daaf9e4c16f0" name="a6020eef42dbfa7acacbb93325b9bc09fa960b44c579bc2f6818d2daaf9e4c16f0"></a>Normal&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6020eef42dbfa7acacbb93325b9bc09fa28d0edd045e05cf5af64e35ae0c4c6ef" name="a6020eef42dbfa7acacbb93325b9bc09fa28d0edd045e05cf5af64e35ae0c4c6ef"></a>Low&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ac131b57cde4999e70e412da516a18c01" name="ac131b57cde4999e70e412da516a18c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac131b57cde4999e70e412da516a18c01">&#9670;&#160;</a></span>WorkerStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacescheduler.html#ac131b57cde4999e70e412da516a18c01">scheduler::WorkerStatus</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enumeration for worker status. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac131b57cde4999e70e412da516a18c01a4d3d769b812b6faa6b76e1a8abaece2d" name="ac131b57cde4999e70e412da516a18c01a4d3d769b812b6faa6b76e1a8abaece2d"></a>Active&#160;</td><td class="fielddoc"><p><a class="el" href="classscheduler_1_1Worker.html" title="Represents a worker thread that executes tasks.">Worker</a> is actively processing tasks. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac131b57cde4999e70e412da516a18c01ae599161956d626eda4cb0a5ffb85271c" name="ac131b57cde4999e70e412da516a18c01ae599161956d626eda4cb0a5ffb85271c"></a>Idle&#160;</td><td class="fielddoc"><p><a class="el" href="classscheduler_1_1Worker.html" title="Represents a worker thread that executes tasks.">Worker</a> is idle, awaiting tasks or steals. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac131b57cde4999e70e412da516a18c01a8bf906833cc7aea8084f552217ed9c1d" name="ac131b57cde4999e70e412da516a18c01a8bf906833cc7aea8084f552217ed9c1d"></a>Suspended&#160;</td><td class="fielddoc"><p><a class="el" href="classscheduler_1_1Worker.html" title="Represents a worker thread that executes tasks.">Worker</a> is temporarily suspended. </p>
+</td></tr>
 </table>
 
 </div>

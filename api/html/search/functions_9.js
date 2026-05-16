@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['schedule_0',['schedule',['../classscheduler_1_1Scheduler.html#a52bbbcd2c3c47b581f40a87af4075e0d',1,'scheduler::Scheduler']]],
-  ['scheduler_1',['Scheduler',['../classscheduler_1_1Scheduler.html#a9e8cdeb19339987584a4f3d20a65fc36',1,'scheduler::Scheduler']]],
-  ['size_2',['size',['../classscheduler_1_1WorkStealingDeque.html#a1fcc23fbff6e1bc68267b6f160877447',1,'scheduler::WorkStealingDeque']]],
-  ['start_3',['start',['../classscheduler_1_1Worker.html#a006219ced522df7c827450dd2fd3ca49',1,'scheduler::Worker']]],
-  ['steal_4',['steal',['../classscheduler_1_1WorkStealingDeque.html#adb9ec4de2ac4ac729e181a983da9b7f4',1,'scheduler::WorkStealingDeque::steal()'],['../classscheduler_1_1Worker.html#ab4a8f917e6ba37b3e1ea6c34374f15bf',1,'scheduler::Worker::steal(Priority priority)']]],
-  ['stop_5',['stop',['../classscheduler_1_1Worker.html#a6e05df6f49d32553edaedc4d41c81c20',1,'scheduler::Worker']]]
+  ['recordtaskcompletion_0',['recordTaskCompletion',['../classscheduler_1_1MetricsCollectorImpl.html#a4f7ed0e6de882a50d570132fe1a8a8d6',1,'scheduler::MetricsCollectorImpl']]],
+  ['recordtaskstolen_1',['recordTaskStolen',['../classscheduler_1_1MetricsCollectorImpl.html#a057685ed0bc3a21626a240fcb8c5edb2',1,'scheduler::MetricsCollectorImpl']]],
+  ['resetcounters_2',['resetcounters',['../classscheduler_1_1MetricsCollectorImpl.html#a579077a6bbb19e1925532a9b17f0b519',1,'scheduler::MetricsCollectorImpl::resetCounters()'],['../classscheduler_1_1IMetricsCollector.html#a1483088c5aea4d31639f9dfe0a0c6d22',1,'scheduler::IMetricsCollector::resetCounters()']]],
+  ['resume_3',['resume',['../classscheduler_1_1Task.html#a4bc9133beeefb258806444039be4505b',1,'scheduler::Task']]],
+  ['return_5fvoid_4',['return_void',['../structscheduler_1_1Task_1_1promise__type.html#ae271e801e15d2ce3d8dadc98c9543a3d',1,'scheduler::Task::promise_type']]]
 ];

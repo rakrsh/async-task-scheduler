@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="metrics_8hpp" kind="file" language="C++">
+    <compoundname>metrics.hpp</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">string</includes>
+    <includedby refid="metrics-impl_8hpp" local="yes">include/scheduler/metrics-impl.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/scheduler/metrics.hpp</label>
+        <link refid="metrics_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>chrono</label>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/scheduler/metrics-impl.hpp</label>
+        <link refid="metrics-impl_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/scheduler/metrics.hpp</label>
+        <link refid="metrics_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structscheduler_1_1WorkerMetrics" prot="public">scheduler::WorkerMetrics</innerclass>
+    <innerclass refid="structscheduler_1_1QueueStatus" prot="public">scheduler::QueueStatus</innerclass>
+    <innerclass refid="structscheduler_1_1PerformanceMetrics" prot="public">scheduler::PerformanceMetrics</innerclass>
+    <innerclass refid="classscheduler_1_1IMetricsCollector" prot="public">scheduler::IMetricsCollector</innerclass>
+    <innernamespace refid="namespacescheduler">scheduler</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacescheduler" kindref="compound">scheduler</ref><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01" kindref="member">WorkerStatus</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01a4d3d769b812b6faa6b76e1a8abaece2d" kindref="member">Active</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01ae599161956d626eda4cb0a5ffb85271c" kindref="member">Idle</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01a8bf906833cc7aea8084f552217ed9c1d" kindref="member">Suspended</ref>,<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="structscheduler_1_1WorkerMetrics" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structscheduler_1_1WorkerMetrics" kindref="compound">WorkerMetrics</ref><sp/>{</highlight></codeline>
+<codeline lineno="23" refid="structscheduler_1_1WorkerMetrics_1af48ef23e8c816dcbe94d210e8bc86673" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structscheduler_1_1WorkerMetrics_1af48ef23e8c816dcbe94d210e8bc86673" kindref="member">id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="structscheduler_1_1WorkerMetrics_1a0df18e1cc59f2c63b2c8acaaf2f1f5be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01" kindref="member">WorkerStatus</ref><sp/><ref refid="structscheduler_1_1WorkerMetrics_1a0df18e1cc59f2c63b2c8acaaf2f1f5be" kindref="member">status</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="structscheduler_1_1WorkerMetrics_1a6af7d7efd40f63df7344e5cca84f2a15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structscheduler_1_1WorkerMetrics_1a6af7d7efd40f63df7344e5cca84f2a15" kindref="member">tasksCompleted</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="structscheduler_1_1WorkerMetrics_1a0776e42c01f520b00fade29fb230c892" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structscheduler_1_1WorkerMetrics_1a0776e42c01f520b00fade29fb230c892" kindref="member">tasksStolen</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="structscheduler_1_1WorkerMetrics_1a41d6f3190874f1619b2ca915f86dd63a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structscheduler_1_1WorkerMetrics_1a41d6f3190874f1619b2ca915f86dd63a" kindref="member">cpuUsage</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="structscheduler_1_1WorkerMetrics_1afad59373a8911c8dac4f50b69268f69e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structscheduler_1_1WorkerMetrics_1afad59373a8911c8dac4f50b69268f69e" kindref="member">highPriorityQueued</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="structscheduler_1_1WorkerMetrics_1a1d450802137ca12d14d66e42884fdedc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structscheduler_1_1WorkerMetrics_1a1d450802137ca12d14d66e42884fdedc" kindref="member">normalPriorityQueued</ref>;</highlight></codeline>
+<codeline lineno="30" refid="structscheduler_1_1WorkerMetrics_1ae7226aa91c24a47675ccb1c242a474df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structscheduler_1_1WorkerMetrics_1ae7226aa91c24a47675ccb1c242a474df" kindref="member">lowPriorityQueued</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="structscheduler_1_1QueueStatus" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structscheduler_1_1QueueStatus" kindref="compound">QueueStatus</ref><sp/>{</highlight></codeline>
+<codeline lineno="37" refid="structscheduler_1_1QueueStatus_1ab56e14115191a025670f1e51d286f483" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structscheduler_1_1QueueStatus_1ab56e14115191a025670f1e51d286f483" kindref="member">totalQueued</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="structscheduler_1_1QueueStatus_1ad4903c179f0e1e62b354fcc1dc0729e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structscheduler_1_1QueueStatus_1ad4903c179f0e1e62b354fcc1dc0729e7" kindref="member">highPriorityTotal</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="structscheduler_1_1QueueStatus_1a720617340f8a77b1d81a8157c6ba267b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structscheduler_1_1QueueStatus_1a720617340f8a77b1d81a8157c6ba267b" kindref="member">normalPriorityTotal</ref>;<sp/></highlight></codeline>
+<codeline lineno="40" refid="structscheduler_1_1QueueStatus_1a041f48d5085d953dd2da0ea31e39721e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structscheduler_1_1QueueStatus_1a041f48d5085d953dd2da0ea31e39721e" kindref="member">lowPriorityTotal</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structscheduler_1_1PerformanceMetrics" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structscheduler_1_1PerformanceMetrics" kindref="compound">PerformanceMetrics</ref><sp/>{</highlight></codeline>
+<codeline lineno="47" refid="structscheduler_1_1PerformanceMetrics_1abfcbd4876d6c9e9b909d3bc7f04f19a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::nanoseconds<sp/><ref refid="structscheduler_1_1PerformanceMetrics_1abfcbd4876d6c9e9b909d3bc7f04f19a7" kindref="member">uptime</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="structscheduler_1_1PerformanceMetrics_1ab3470c9ca992e4f1c4ed8b2d0f730e7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structscheduler_1_1PerformanceMetrics_1ab3470c9ca992e4f1c4ed8b2d0f730e7f" kindref="member">totalTasksProcessed</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="structscheduler_1_1PerformanceMetrics_1acc6bf4ef8ca49219bd41088404e1b9e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structscheduler_1_1PerformanceMetrics_1acc6bf4ef8ca49219bd41088404e1b9e6" kindref="member">totalTasksStolen</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="structscheduler_1_1PerformanceMetrics_1ab67dbbbb939ce9b1aee5589807373b81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structscheduler_1_1PerformanceMetrics_1ab67dbbbb939ce9b1aee5589807373b81" kindref="member">tasksPerSecond</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="structscheduler_1_1PerformanceMetrics_1afd249c9c1e7e4b21bfe6a21bcc77371c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structscheduler_1_1PerformanceMetrics_1afd249c9c1e7e4b21bfe6a21bcc77371c" kindref="member">stealsPerSecond</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="structscheduler_1_1PerformanceMetrics_1a8d5b95c5c00aab21e322d75aa110fdb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structscheduler_1_1PerformanceMetrics_1a8d5b95c5c00aab21e322d75aa110fdb9" kindref="member">averageLatency</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="structscheduler_1_1PerformanceMetrics_1a3961ea9b1a96ba943829ba0cdae7a0ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structscheduler_1_1PerformanceMetrics_1a3961ea9b1a96ba943829ba0cdae7a0ae" kindref="member">averageCpuUsage</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classscheduler_1_1IMetricsCollector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classscheduler_1_1IMetricsCollector" kindref="compound">IMetricsCollector</ref><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64" refid="classscheduler_1_1IMetricsCollector_1a4584ed1d9a59e114dbaeca7a0cbe80c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classscheduler_1_1IMetricsCollector_1a4584ed1d9a59e114dbaeca7a0cbe80c6" kindref="member">~IMetricsCollector</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classscheduler_1_1IMetricsCollector_1a40b723bc8984f394e2072d70ff70403c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="structscheduler_1_1WorkerMetrics" kindref="compound">WorkerMetrics</ref><sp/><ref refid="classscheduler_1_1IMetricsCollector_1a40b723bc8984f394e2072d70ff70403c" kindref="member">getWorkerMetrics</ref>(uint32_t<sp/>workerId)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classscheduler_1_1IMetricsCollector_1a83e9ec5d91311fb90cf4d8e4cc82b35c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::vector&lt;WorkerMetrics&gt;<sp/><ref refid="classscheduler_1_1IMetricsCollector_1a83e9ec5d91311fb90cf4d8e4cc82b35c" kindref="member">getAllWorkerMetrics</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classscheduler_1_1IMetricsCollector_1a30d48a84ef446dd9370681a978934f9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="structscheduler_1_1QueueStatus" kindref="compound">QueueStatus</ref><sp/><ref refid="classscheduler_1_1IMetricsCollector_1a30d48a84ef446dd9370681a978934f9e" kindref="member">getQueueStatus</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classscheduler_1_1IMetricsCollector_1ad4449bc432e6f54cbf0d521c675174c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="structscheduler_1_1PerformanceMetrics" kindref="compound">PerformanceMetrics</ref><sp/><ref refid="classscheduler_1_1IMetricsCollector_1ad4449bc432e6f54cbf0d521c675174c7" kindref="member">getPerformanceMetrics</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classscheduler_1_1IMetricsCollector_1aab8d0569df44035c7c7bf7eaeae7c12a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="classscheduler_1_1IMetricsCollector_1aab8d0569df44035c7c7bf7eaeae7c12a" kindref="member">getActiveWorkerCount</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classscheduler_1_1IMetricsCollector_1a3db8ac6cd06a87c78b312e4ebb4bec7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="classscheduler_1_1IMetricsCollector_1a3db8ac6cd06a87c78b312e4ebb4bec7a" kindref="member">getTotalWorkerCount</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classscheduler_1_1IMetricsCollector_1a1483088c5aea4d31639f9dfe0a0c6d22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classscheduler_1_1IMetricsCollector_1a1483088c5aea4d31639f9dfe0a0c6d22" kindref="member">resetCounters</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classscheduler_1_1IMetricsCollector_1aabf4eb1b5acd5446f199c809f2cb3aa5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classscheduler_1_1IMetricsCollector_1aabf4eb1b5acd5446f199c809f2cb3aa5" kindref="member">isMetricsEnabled</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classscheduler_1_1IMetricsCollector_1aeac1551e21281c68dc74e702c006443a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classscheduler_1_1IMetricsCollector_1aeac1551e21281c68dc74e702c006443a" kindref="member">setMetricsEnabled</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scheduler</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/scheduler/metrics.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structscheduler_1_1WorkerMetrics" kind="struct" language="C++" prot="public">
+    <compoundname>scheduler::WorkerMetrics</compoundname>
+    <includes refid="metrics_8hpp" local="no">metrics.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structscheduler_1_1WorkerMetrics_1af48ef23e8c816dcbe94d210e8bc86673" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t scheduler::WorkerMetrics::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>scheduler::WorkerMetrics::id</qualifiedname>
+        <briefdescription>
+<para><ref refid="classscheduler_1_1Worker" kindref="compound">Worker</ref> thread ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="23" column="14" bodyfile="include/scheduler/metrics.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1WorkerMetrics_1a0df18e1cc59f2c63b2c8acaaf2f1f5be" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01" kindref="member">WorkerStatus</ref></type>
+        <definition>WorkerStatus scheduler::WorkerMetrics::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <qualifiedname>scheduler::WorkerMetrics::status</qualifiedname>
+        <briefdescription>
+<para>Current worker status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="24" column="18" bodyfile="include/scheduler/metrics.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1WorkerMetrics_1a6af7d7efd40f63df7344e5cca84f2a15" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t scheduler::WorkerMetrics::tasksCompleted</definition>
+        <argsstring></argsstring>
+        <name>tasksCompleted</name>
+        <qualifiedname>scheduler::WorkerMetrics::tasksCompleted</qualifiedname>
+        <briefdescription>
+<para>Total tasks completed by this worker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="25" column="14" bodyfile="include/scheduler/metrics.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1WorkerMetrics_1a0776e42c01f520b00fade29fb230c892" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t scheduler::WorkerMetrics::tasksStolen</definition>
+        <argsstring></argsstring>
+        <name>tasksStolen</name>
+        <qualifiedname>scheduler::WorkerMetrics::tasksStolen</qualifiedname>
+        <briefdescription>
+<para>Total tasks stolen from others. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="26" column="14" bodyfile="include/scheduler/metrics.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1WorkerMetrics_1a41d6f3190874f1619b2ca915f86dd63a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double scheduler::WorkerMetrics::cpuUsage</definition>
+        <argsstring></argsstring>
+        <name>cpuUsage</name>
+        <qualifiedname>scheduler::WorkerMetrics::cpuUsage</qualifiedname>
+        <briefdescription>
+<para>Estimated CPU usage percentage (0-100) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="27" column="12" bodyfile="include/scheduler/metrics.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1WorkerMetrics_1afad59373a8911c8dac4f50b69268f69e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t scheduler::WorkerMetrics::highPriorityQueued</definition>
+        <argsstring></argsstring>
+        <name>highPriorityQueued</name>
+        <qualifiedname>scheduler::WorkerMetrics::highPriorityQueued</qualifiedname>
+        <briefdescription>
+<para>Tasks queued at high priority. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="28" column="14" bodyfile="include/scheduler/metrics.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1WorkerMetrics_1a1d450802137ca12d14d66e42884fdedc" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t scheduler::WorkerMetrics::normalPriorityQueued</definition>
+        <argsstring></argsstring>
+        <name>normalPriorityQueued</name>
+        <qualifiedname>scheduler::WorkerMetrics::normalPriorityQueued</qualifiedname>
+        <briefdescription>
+<para>Tasks queued at normal priority. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="29" column="14" bodyfile="include/scheduler/metrics.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1WorkerMetrics_1ae7226aa91c24a47675ccb1c242a474df" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t scheduler::WorkerMetrics::lowPriorityQueued</definition>
+        <argsstring></argsstring>
+        <name>lowPriorityQueued</name>
+        <qualifiedname>scheduler::WorkerMetrics::lowPriorityQueued</qualifiedname>
+        <briefdescription>
+<para>Tasks queued at low priority. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="30" column="14" bodyfile="include/scheduler/metrics.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Per-worker metrics snapshot. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/scheduler/metrics.hpp" line="22" column="1" bodyfile="include/scheduler/metrics.hpp" bodystart="22" bodyend="31"/>
+    <listofallmembers>
+      <member refid="structscheduler_1_1WorkerMetrics_1a41d6f3190874f1619b2ca915f86dd63a" prot="public" virt="non-virtual"><scope>scheduler::WorkerMetrics</scope><name>cpuUsage</name></member>
+      <member refid="structscheduler_1_1WorkerMetrics_1afad59373a8911c8dac4f50b69268f69e" prot="public" virt="non-virtual"><scope>scheduler::WorkerMetrics</scope><name>highPriorityQueued</name></member>
+      <member refid="structscheduler_1_1WorkerMetrics_1af48ef23e8c816dcbe94d210e8bc86673" prot="public" virt="non-virtual"><scope>scheduler::WorkerMetrics</scope><name>id</name></member>
+      <member refid="structscheduler_1_1WorkerMetrics_1ae7226aa91c24a47675ccb1c242a474df" prot="public" virt="non-virtual"><scope>scheduler::WorkerMetrics</scope><name>lowPriorityQueued</name></member>
+      <member refid="structscheduler_1_1WorkerMetrics_1a1d450802137ca12d14d66e42884fdedc" prot="public" virt="non-virtual"><scope>scheduler::WorkerMetrics</scope><name>normalPriorityQueued</name></member>
+      <member refid="structscheduler_1_1WorkerMetrics_1a0df18e1cc59f2c63b2c8acaaf2f1f5be" prot="public" virt="non-virtual"><scope>scheduler::WorkerMetrics</scope><name>status</name></member>
+      <member refid="structscheduler_1_1WorkerMetrics_1a6af7d7efd40f63df7344e5cca84f2a15" prot="public" virt="non-virtual"><scope>scheduler::WorkerMetrics</scope><name>tasksCompleted</name></member>
+      <member refid="structscheduler_1_1WorkerMetrics_1a0776e42c01f520b00fade29fb230c892" prot="public" virt="non-virtual"><scope>scheduler::WorkerMetrics</scope><name>tasksStolen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

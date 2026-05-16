@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classscheduler_1_1IMetricsCollector" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>scheduler::IMetricsCollector</compoundname>
+    <derivedcompoundref refid="classscheduler_1_1MetricsCollectorImpl" prot="public" virt="non-virtual">scheduler::MetricsCollectorImpl</derivedcompoundref>
+    <includes refid="metrics_8hpp" local="no">metrics.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classscheduler_1_1IMetricsCollector_1a4584ed1d9a59e114dbaeca7a0cbe80c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual scheduler::IMetricsCollector::~IMetricsCollector</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IMetricsCollector</name>
+        <qualifiedname>scheduler::IMetricsCollector::~IMetricsCollector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="64" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1IMetricsCollector_1a40b723bc8984f394e2072d70ff70403c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structscheduler_1_1WorkerMetrics" kindref="compound">WorkerMetrics</ref></type>
+        <definition>virtual WorkerMetrics scheduler::IMetricsCollector::getWorkerMetrics</definition>
+        <argsstring>(uint32_t workerId) const =0</argsstring>
+        <name>getWorkerMetrics</name>
+        <qualifiedname>scheduler::IMetricsCollector::getWorkerMetrics</qualifiedname>
+        <reimplementedby refid="classscheduler_1_1MetricsCollectorImpl_1a28fecdcf909a74c4bdebe68e27b32b32">getWorkerMetrics</reimplementedby>
+        <param>
+          <type>uint32_t</type>
+          <declname>workerId</declname>
+        </param>
+        <briefdescription>
+<para>Get metrics for a specific worker. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>workerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The worker ID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structscheduler_1_1WorkerMetrics" kindref="compound">WorkerMetrics</ref> for the specified worker </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="71" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1IMetricsCollector_1a83e9ec5d91311fb90cf4d8e4cc82b35c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; <ref refid="structscheduler_1_1WorkerMetrics" kindref="compound">WorkerMetrics</ref> &gt;</type>
+        <definition>virtual std::vector&lt; WorkerMetrics &gt; scheduler::IMetricsCollector::getAllWorkerMetrics</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getAllWorkerMetrics</name>
+        <qualifiedname>scheduler::IMetricsCollector::getAllWorkerMetrics</qualifiedname>
+        <reimplementedby refid="classscheduler_1_1MetricsCollectorImpl_1aa1aa1622cbbc37e53d7474601fac5377">getAllWorkerMetrics</reimplementedby>
+        <briefdescription>
+<para>Get metrics for all workers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vector of <ref refid="structscheduler_1_1WorkerMetrics" kindref="compound">WorkerMetrics</ref> for all workers </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="77" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1IMetricsCollector_1a30d48a84ef446dd9370681a978934f9e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structscheduler_1_1QueueStatus" kindref="compound">QueueStatus</ref></type>
+        <definition>virtual QueueStatus scheduler::IMetricsCollector::getQueueStatus</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getQueueStatus</name>
+        <qualifiedname>scheduler::IMetricsCollector::getQueueStatus</qualifiedname>
+        <reimplementedby refid="classscheduler_1_1MetricsCollectorImpl_1a33c7f363de99bd276ddd30f674969ea2">getQueueStatus</reimplementedby>
+        <briefdescription>
+<para>Get global queue status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current queue status snapshot </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="83" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1IMetricsCollector_1ad4449bc432e6f54cbf0d521c675174c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structscheduler_1_1PerformanceMetrics" kindref="compound">PerformanceMetrics</ref></type>
+        <definition>virtual PerformanceMetrics scheduler::IMetricsCollector::getPerformanceMetrics</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getPerformanceMetrics</name>
+        <qualifiedname>scheduler::IMetricsCollector::getPerformanceMetrics</qualifiedname>
+        <reimplementedby refid="classscheduler_1_1MetricsCollectorImpl_1a05ea728b8a46d4d5d8988b726f138e61">getPerformanceMetrics</reimplementedby>
+        <briefdescription>
+<para>Get performance metrics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current performance metrics snapshot </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="89" column="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1IMetricsCollector_1aab8d0569df44035c7c7bf7eaeae7c12a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t scheduler::IMetricsCollector::getActiveWorkerCount</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getActiveWorkerCount</name>
+        <qualifiedname>scheduler::IMetricsCollector::getActiveWorkerCount</qualifiedname>
+        <reimplementedby refid="classscheduler_1_1MetricsCollectorImpl_1ac3f71d7a46eb957ade3dd0f95c7a54aa">getActiveWorkerCount</reimplementedby>
+        <briefdescription>
+<para>Get number of active workers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Count of workers with Active status </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="95" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1IMetricsCollector_1a3db8ac6cd06a87c78b312e4ebb4bec7a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t scheduler::IMetricsCollector::getTotalWorkerCount</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getTotalWorkerCount</name>
+        <qualifiedname>scheduler::IMetricsCollector::getTotalWorkerCount</qualifiedname>
+        <reimplementedby refid="classscheduler_1_1MetricsCollectorImpl_1a9aa8eece92c0a6772f8ad16508a7f400">getTotalWorkerCount</reimplementedby>
+        <briefdescription>
+<para>Get total number of workers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Total worker count </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="101" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1IMetricsCollector_1a1483088c5aea4d31639f9dfe0a0c6d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void scheduler::IMetricsCollector::resetCounters</definition>
+        <argsstring>()=0</argsstring>
+        <name>resetCounters</name>
+        <qualifiedname>scheduler::IMetricsCollector::resetCounters</qualifiedname>
+        <reimplementedby refid="classscheduler_1_1MetricsCollectorImpl_1a579077a6bbb19e1925532a9b17f0b519">resetCounters</reimplementedby>
+        <briefdescription>
+<para>Reset performance counters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="106" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1IMetricsCollector_1aabf4eb1b5acd5446f199c809f2cb3aa5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool scheduler::IMetricsCollector::isMetricsEnabled</definition>
+        <argsstring>() const =0</argsstring>
+        <name>isMetricsEnabled</name>
+        <qualifiedname>scheduler::IMetricsCollector::isMetricsEnabled</qualifiedname>
+        <reimplementedby refid="classscheduler_1_1MetricsCollectorImpl_1a04c22d6023ee759f26ccb7e8d5a42c4d">isMetricsEnabled</reimplementedby>
+        <briefdescription>
+<para>Check if metrics collection is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if metrics collection is active </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="112" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1IMetricsCollector_1aeac1551e21281c68dc74e702c006443a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void scheduler::IMetricsCollector::setMetricsEnabled</definition>
+        <argsstring>(bool enable)=0</argsstring>
+        <name>setMetricsEnabled</name>
+        <qualifiedname>scheduler::IMetricsCollector::setMetricsEnabled</qualifiedname>
+        <reimplementedby refid="classscheduler_1_1MetricsCollectorImpl_1abcdc81024d53e295d5d15f9bba65aeb1">setMetricsEnabled</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Enable or disable metrics collection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true to enable, false to disable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="118" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Metrics collector interface for scheduler monitoring. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This interface allows external tools (like the dashboard) to query scheduler metrics for visualization and monitoring. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>scheduler::IMetricsCollector</label>
+        <link refid="classscheduler_1_1IMetricsCollector"/>
+      </node>
+      <node id="2">
+        <label>scheduler::MetricsCollectorImpl</label>
+        <link refid="classscheduler_1_1MetricsCollectorImpl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/scheduler/metrics.hpp" line="62" column="1" bodyfile="include/scheduler/metrics.hpp" bodystart="62" bodyend="119"/>
+    <listofallmembers>
+      <member refid="classscheduler_1_1IMetricsCollector_1aab8d0569df44035c7c7bf7eaeae7c12a" prot="public" virt="pure-virtual"><scope>scheduler::IMetricsCollector</scope><name>getActiveWorkerCount</name></member>
+      <member refid="classscheduler_1_1IMetricsCollector_1a83e9ec5d91311fb90cf4d8e4cc82b35c" prot="public" virt="pure-virtual"><scope>scheduler::IMetricsCollector</scope><name>getAllWorkerMetrics</name></member>
+      <member refid="classscheduler_1_1IMetricsCollector_1ad4449bc432e6f54cbf0d521c675174c7" prot="public" virt="pure-virtual"><scope>scheduler::IMetricsCollector</scope><name>getPerformanceMetrics</name></member>
+      <member refid="classscheduler_1_1IMetricsCollector_1a30d48a84ef446dd9370681a978934f9e" prot="public" virt="pure-virtual"><scope>scheduler::IMetricsCollector</scope><name>getQueueStatus</name></member>
+      <member refid="classscheduler_1_1IMetricsCollector_1a3db8ac6cd06a87c78b312e4ebb4bec7a" prot="public" virt="pure-virtual"><scope>scheduler::IMetricsCollector</scope><name>getTotalWorkerCount</name></member>
+      <member refid="classscheduler_1_1IMetricsCollector_1a40b723bc8984f394e2072d70ff70403c" prot="public" virt="pure-virtual"><scope>scheduler::IMetricsCollector</scope><name>getWorkerMetrics</name></member>
+      <member refid="classscheduler_1_1IMetricsCollector_1aabf4eb1b5acd5446f199c809f2cb3aa5" prot="public" virt="pure-virtual"><scope>scheduler::IMetricsCollector</scope><name>isMetricsEnabled</name></member>
+      <member refid="classscheduler_1_1IMetricsCollector_1a1483088c5aea4d31639f9dfe0a0c6d22" prot="public" virt="pure-virtual"><scope>scheduler::IMetricsCollector</scope><name>resetCounters</name></member>
+      <member refid="classscheduler_1_1IMetricsCollector_1aeac1551e21281c68dc74e702c006443a" prot="public" virt="pure-virtual"><scope>scheduler::IMetricsCollector</scope><name>setMetricsEnabled</name></member>
+      <member refid="classscheduler_1_1IMetricsCollector_1a4584ed1d9a59e114dbaeca7a0cbe80c6" prot="public" virt="virtual"><scope>scheduler::IMetricsCollector</scope><name>~IMetricsCollector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

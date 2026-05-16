@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['final_5fsuspend_0',['final_suspend',['../structscheduler_1_1Task_1_1promise__type.html#a814f67580dda467a24509edf5596c798',1,'scheduler::Task::promise_type']]]
+  ['empty_0',['empty',['../classscheduler_1_1WorkStealingDeque.html#ab56b347c0dea5a1cbc81898a3ac569ce',1,'scheduler::WorkStealingDeque']]]
 ];

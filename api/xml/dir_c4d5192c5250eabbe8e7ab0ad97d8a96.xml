@@ -3,6 +3,8 @@
   <compounddef id="dir_c4d5192c5250eabbe8e7ab0ad97d8a96" kind="dir">
     <compoundname>include/scheduler</compoundname>
     <innerfile refid="deque_8hpp">deque.hpp</innerfile>
+    <innerfile refid="metrics-impl_8hpp">metrics-impl.hpp</innerfile>
+    <innerfile refid="metrics_8hpp">metrics.hpp</innerfile>
     <innerfile refid="priority_8hpp">priority.hpp</innerfile>
     <innerfile refid="scheduler_8hpp">scheduler.hpp</innerfile>
     <innerfile refid="task_8hpp">task.hpp</innerfile>

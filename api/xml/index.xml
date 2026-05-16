@@ -1,11 +1,61 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="classscheduler_1_1IMetricsCollector" kind="class"><name>scheduler::IMetricsCollector</name>
+    <member refid="classscheduler_1_1IMetricsCollector_1a4584ed1d9a59e114dbaeca7a0cbe80c6" kind="function"><name>~IMetricsCollector</name></member>
+    <member refid="classscheduler_1_1IMetricsCollector_1a40b723bc8984f394e2072d70ff70403c" kind="function"><name>getWorkerMetrics</name></member>
+    <member refid="classscheduler_1_1IMetricsCollector_1a83e9ec5d91311fb90cf4d8e4cc82b35c" kind="function"><name>getAllWorkerMetrics</name></member>
+    <member refid="classscheduler_1_1IMetricsCollector_1a30d48a84ef446dd9370681a978934f9e" kind="function"><name>getQueueStatus</name></member>
+    <member refid="classscheduler_1_1IMetricsCollector_1ad4449bc432e6f54cbf0d521c675174c7" kind="function"><name>getPerformanceMetrics</name></member>
+    <member refid="classscheduler_1_1IMetricsCollector_1aab8d0569df44035c7c7bf7eaeae7c12a" kind="function"><name>getActiveWorkerCount</name></member>
+    <member refid="classscheduler_1_1IMetricsCollector_1a3db8ac6cd06a87c78b312e4ebb4bec7a" kind="function"><name>getTotalWorkerCount</name></member>
+    <member refid="classscheduler_1_1IMetricsCollector_1a1483088c5aea4d31639f9dfe0a0c6d22" kind="function"><name>resetCounters</name></member>
+    <member refid="classscheduler_1_1IMetricsCollector_1aabf4eb1b5acd5446f199c809f2cb3aa5" kind="function"><name>isMetricsEnabled</name></member>
+    <member refid="classscheduler_1_1IMetricsCollector_1aeac1551e21281c68dc74e702c006443a" kind="function"><name>setMetricsEnabled</name></member>
+  </compound>
+  <compound refid="classscheduler_1_1MetricsCollectorImpl" kind="class"><name>scheduler::MetricsCollectorImpl</name>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a9456cb1a06f77d0480eedcb3b5d2ee45" kind="variable"><name>workerData_</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a020de5317dfd532cd146880a2b3ede2d" kind="variable"><name>totalTasksProcessed_</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a732d3f372accf2921028878c7425e88c" kind="variable"><name>totalTasksStolen_</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1aa47929378b9eb6a9a22abecc8b60c81c" kind="variable"><name>startTime_</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a81b817b55746ec51aa913d692141d101" kind="variable"><name>dataMutex_</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a49070101dc235f9bdb88a99a4c091c79" kind="variable"><name>metricsEnabled_</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1acce712d13e2a6385e89f7f5100cd35d3" kind="function"><name>MetricsCollectorImpl</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a28fecdcf909a74c4bdebe68e27b32b32" kind="function"><name>getWorkerMetrics</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1aa1aa1622cbbc37e53d7474601fac5377" kind="function"><name>getAllWorkerMetrics</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a33c7f363de99bd276ddd30f674969ea2" kind="function"><name>getQueueStatus</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a05ea728b8a46d4d5d8988b726f138e61" kind="function"><name>getPerformanceMetrics</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1ac3f71d7a46eb957ade3dd0f95c7a54aa" kind="function"><name>getActiveWorkerCount</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a9aa8eece92c0a6772f8ad16508a7f400" kind="function"><name>getTotalWorkerCount</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a579077a6bbb19e1925532a9b17f0b519" kind="function"><name>resetCounters</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a04c22d6023ee759f26ccb7e8d5a42c4d" kind="function"><name>isMetricsEnabled</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1abcdc81024d53e295d5d15f9bba65aeb1" kind="function"><name>setMetricsEnabled</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a5bf4208916ae2a80b8428c92a82ba7d7" kind="function"><name>updateWorkerStatus</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a4f7ed0e6de882a50d570132fe1a8a8d6" kind="function"><name>recordTaskCompletion</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a057685ed0bc3a21626a240fcb8c5edb2" kind="function"><name>recordTaskStolen</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1ae94a69b35a4b75cd903ee20ffe0332e5" kind="function"><name>setQueueSize</name></member>
+    <member refid="classscheduler_1_1MetricsCollectorImpl_1a073d465d67f7a15a4f4ef47904568b79" kind="function"><name>setCpuUsage</name></member>
+  </compound>
+  <compound refid="structscheduler_1_1PerformanceMetrics" kind="struct"><name>scheduler::PerformanceMetrics</name>
+    <member refid="structscheduler_1_1PerformanceMetrics_1abfcbd4876d6c9e9b909d3bc7f04f19a7" kind="variable"><name>uptime</name></member>
+    <member refid="structscheduler_1_1PerformanceMetrics_1ab3470c9ca992e4f1c4ed8b2d0f730e7f" kind="variable"><name>totalTasksProcessed</name></member>
+    <member refid="structscheduler_1_1PerformanceMetrics_1acc6bf4ef8ca49219bd41088404e1b9e6" kind="variable"><name>totalTasksStolen</name></member>
+    <member refid="structscheduler_1_1PerformanceMetrics_1ab67dbbbb939ce9b1aee5589807373b81" kind="variable"><name>tasksPerSecond</name></member>
+    <member refid="structscheduler_1_1PerformanceMetrics_1afd249c9c1e7e4b21bfe6a21bcc77371c" kind="variable"><name>stealsPerSecond</name></member>
+    <member refid="structscheduler_1_1PerformanceMetrics_1a8d5b95c5c00aab21e322d75aa110fdb9" kind="variable"><name>averageLatency</name></member>
+    <member refid="structscheduler_1_1PerformanceMetrics_1a3961ea9b1a96ba943829ba0cdae7a0ae" kind="variable"><name>averageCpuUsage</name></member>
+  </compound>
   <compound refid="structscheduler_1_1Task_1_1promise__type" kind="struct"><name>scheduler::Task::promise_type</name>
     <member refid="structscheduler_1_1Task_1_1promise__type_1a579814308582ecc3a6ab1cb221913353" kind="function"><name>get_return_object</name></member>
     <member refid="structscheduler_1_1Task_1_1promise__type_1a1634da40059aa6c391944dbd5a168c9f" kind="function"><name>initial_suspend</name></member>
     <member refid="structscheduler_1_1Task_1_1promise__type_1a814f67580dda467a24509edf5596c798" kind="function"><name>final_suspend</name></member>
     <member refid="structscheduler_1_1Task_1_1promise__type_1ae271e801e15d2ce3d8dadc98c9543a3d" kind="function"><name>return_void</name></member>
     <member refid="structscheduler_1_1Task_1_1promise__type_1a30d9bd92956a9654b527006d0bf5ba61" kind="function"><name>unhandled_exception</name></member>
+  </compound>
+  <compound refid="structscheduler_1_1QueueStatus" kind="struct"><name>scheduler::QueueStatus</name>
+    <member refid="structscheduler_1_1QueueStatus_1ab56e14115191a025670f1e51d286f483" kind="variable"><name>totalQueued</name></member>
+    <member refid="structscheduler_1_1QueueStatus_1ad4903c179f0e1e62b354fcc1dc0729e7" kind="variable"><name>highPriorityTotal</name></member>
+    <member refid="structscheduler_1_1QueueStatus_1a720617340f8a77b1d81a8157c6ba267b" kind="variable"><name>normalPriorityTotal</name></member>
+    <member refid="structscheduler_1_1QueueStatus_1a041f48d5085d953dd2da0ea31e39721e" kind="variable"><name>lowPriorityTotal</name></member>
   </compound>
   <compound refid="classscheduler_1_1Scheduler" kind="class"><name>scheduler::Scheduler</name>
     <member refid="classscheduler_1_1Scheduler_1a383837e1f1a43507b0fee452470e0283" kind="variable"><name>workers_</name></member>
@@ -51,6 +101,25 @@
     <member refid="classscheduler_1_1Worker_1acdd56f73a63a296c237600d24dbf56fd" kind="function"><name>try_pop_local</name></member>
     <member refid="classscheduler_1_1Worker_1ae4e015a4cb7ca5c7a7344c2f7f7df3d8" kind="function"><name>try_steal</name></member>
   </compound>
+  <compound refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData" kind="struct"><name>scheduler::MetricsCollectorImpl::WorkerData</name>
+    <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1a8c94814c86d3d1d173d9d971a79b7a53" kind="variable"><name>status</name></member>
+    <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1aa5bf2629fc46b3f24bc2946a37975cb1" kind="variable"><name>tasksCompleted</name></member>
+    <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1a069ea836ca3fdcb1c7750d7ba3b2912f" kind="variable"><name>tasksStolen</name></member>
+    <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1a4d59aa0fe77d400cf44312c37f5eadcd" kind="variable"><name>cpuUsage</name></member>
+    <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1acafb328d7d5ed3561e482dbc4b6e24f3" kind="variable"><name>highPriorityQueued</name></member>
+    <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1a24a889b023f79bb15ab489bf50bf76ec" kind="variable"><name>normalPriorityQueued</name></member>
+    <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1ad8272ed32a93ffabbe21cc190dcd8852" kind="variable"><name>lowPriorityQueued</name></member>
+  </compound>
+  <compound refid="structscheduler_1_1WorkerMetrics" kind="struct"><name>scheduler::WorkerMetrics</name>
+    <member refid="structscheduler_1_1WorkerMetrics_1af48ef23e8c816dcbe94d210e8bc86673" kind="variable"><name>id</name></member>
+    <member refid="structscheduler_1_1WorkerMetrics_1a0df18e1cc59f2c63b2c8acaaf2f1f5be" kind="variable"><name>status</name></member>
+    <member refid="structscheduler_1_1WorkerMetrics_1a6af7d7efd40f63df7344e5cca84f2a15" kind="variable"><name>tasksCompleted</name></member>
+    <member refid="structscheduler_1_1WorkerMetrics_1a0776e42c01f520b00fade29fb230c892" kind="variable"><name>tasksStolen</name></member>
+    <member refid="structscheduler_1_1WorkerMetrics_1a41d6f3190874f1619b2ca915f86dd63a" kind="variable"><name>cpuUsage</name></member>
+    <member refid="structscheduler_1_1WorkerMetrics_1afad59373a8911c8dac4f50b69268f69e" kind="variable"><name>highPriorityQueued</name></member>
+    <member refid="structscheduler_1_1WorkerMetrics_1a1d450802137ca12d14d66e42884fdedc" kind="variable"><name>normalPriorityQueued</name></member>
+    <member refid="structscheduler_1_1WorkerMetrics_1ae7226aa91c24a47675ccb1c242a474df" kind="variable"><name>lowPriorityQueued</name></member>
+  </compound>
   <compound refid="classscheduler_1_1WorkStealingDeque" kind="class"><name>scheduler::WorkStealingDeque</name>
     <member refid="classscheduler_1_1WorkStealingDeque_1a9e7cd17cce9fe473805953bc0050ca08" kind="variable"><name>mutex_</name></member>
     <member refid="classscheduler_1_1WorkStealingDeque_1afb35f9ff7a39b506b9e21b990fb56d46" kind="variable"><name>deque_</name></member>
@@ -61,12 +130,20 @@
     <member refid="classscheduler_1_1WorkStealingDeque_1a1fcc23fbff6e1bc68267b6f160877447" kind="function"><name>size</name></member>
   </compound>
   <compound refid="namespacescheduler" kind="namespace"><name>scheduler</name>
+    <member refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01" kind="enum"><name>WorkerStatus</name></member>
+    <member refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01a4d3d769b812b6faa6b76e1a8abaece2d" kind="enumvalue"><name>Active</name></member>
+    <member refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01ae599161956d626eda4cb0a5ffb85271c" kind="enumvalue"><name>Idle</name></member>
+    <member refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01a8bf906833cc7aea8084f552217ed9c1d" kind="enumvalue"><name>Suspended</name></member>
     <member refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09f" kind="enum"><name>Priority</name></member>
     <member refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09fa655d20c1ca69519ca647684edbb2db35" kind="enumvalue"><name>High</name></member>
     <member refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09fa960b44c579bc2f6818d2daaf9e4c16f0" kind="enumvalue"><name>Normal</name></member>
     <member refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09fa28d0edd045e05cf5af64e35ae0c4c6ef" kind="enumvalue"><name>Low</name></member>
   </compound>
   <compound refid="deque_8hpp" kind="file"><name>deque.hpp</name>
+  </compound>
+  <compound refid="metrics-impl_8hpp" kind="file"><name>metrics-impl.hpp</name>
+  </compound>
+  <compound refid="metrics_8hpp" kind="file"><name>metrics.hpp</name>
   </compound>
   <compound refid="priority_8hpp" kind="file"><name>priority.hpp</name>
   </compound>

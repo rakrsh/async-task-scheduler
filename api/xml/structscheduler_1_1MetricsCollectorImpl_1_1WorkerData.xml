@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData" kind="struct" language="C++" prot="private">
+    <compoundname>scheduler::MetricsCollectorImpl::WorkerData</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1a8c94814c86d3d1d173d9d971a79b7a53" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01" kindref="member">WorkerStatus</ref></type>
+        <definition>WorkerStatus scheduler::MetricsCollectorImpl::WorkerData::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::WorkerData::status</qualifiedname>
+        <initializer>= <ref refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01ae599161956d626eda4cb0a5ffb85271c" kindref="member">WorkerStatus::Idle</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="23" column="22" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1aa5bf2629fc46b3f24bc2946a37975cb1" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t scheduler::MetricsCollectorImpl::WorkerData::tasksCompleted</definition>
+        <argsstring></argsstring>
+        <name>tasksCompleted</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::WorkerData::tasksCompleted</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="24" column="18" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1a069ea836ca3fdcb1c7750d7ba3b2912f" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t scheduler::MetricsCollectorImpl::WorkerData::tasksStolen</definition>
+        <argsstring></argsstring>
+        <name>tasksStolen</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::WorkerData::tasksStolen</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="25" column="18" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1a4d59aa0fe77d400cf44312c37f5eadcd" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double scheduler::MetricsCollectorImpl::WorkerData::cpuUsage</definition>
+        <argsstring></argsstring>
+        <name>cpuUsage</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::WorkerData::cpuUsage</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="26" column="16" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1acafb328d7d5ed3561e482dbc4b6e24f3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t scheduler::MetricsCollectorImpl::WorkerData::highPriorityQueued</definition>
+        <argsstring></argsstring>
+        <name>highPriorityQueued</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::WorkerData::highPriorityQueued</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="27" column="18" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1a24a889b023f79bb15ab489bf50bf76ec" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t scheduler::MetricsCollectorImpl::WorkerData::normalPriorityQueued</definition>
+        <argsstring></argsstring>
+        <name>normalPriorityQueued</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::WorkerData::normalPriorityQueued</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="28" column="18" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1ad8272ed32a93ffabbe21cc190dcd8852" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t scheduler::MetricsCollectorImpl::WorkerData::lowPriorityQueued</definition>
+        <argsstring></argsstring>
+        <name>lowPriorityQueued</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::WorkerData::lowPriorityQueued</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="29" column="18" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/scheduler/metrics-impl.hpp" line="22" column="5" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="22" bodyend="30"/>
+    <listofallmembers>
+      <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1a4d59aa0fe77d400cf44312c37f5eadcd" prot="public" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl::WorkerData</scope><name>cpuUsage</name></member>
+      <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1acafb328d7d5ed3561e482dbc4b6e24f3" prot="public" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl::WorkerData</scope><name>highPriorityQueued</name></member>
+      <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1ad8272ed32a93ffabbe21cc190dcd8852" prot="public" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl::WorkerData</scope><name>lowPriorityQueued</name></member>
+      <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1a24a889b023f79bb15ab489bf50bf76ec" prot="public" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl::WorkerData</scope><name>normalPriorityQueued</name></member>
+      <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1a8c94814c86d3d1d173d9d971a79b7a53" prot="public" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl::WorkerData</scope><name>status</name></member>
+      <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1aa5bf2629fc46b3f24bc2946a37975cb1" prot="public" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl::WorkerData</scope><name>tasksCompleted</name></member>
+      <member refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData_1a069ea836ca3fdcb1c7750d7ba3b2912f" prot="public" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl::WorkerData</scope><name>tasksStolen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['get_5freturn_5fobject_0',['get_return_object',['../structscheduler_1_1Task_1_1promise__type.html#a579814308582ecc3a6ab1cb221913353',1,'scheduler::Task::promise_type']]]
+  ['get_5freturn_5fobject_0',['get_return_object',['../structscheduler_1_1Task_1_1promise__type.html#a579814308582ecc3a6ab1cb221913353',1,'scheduler::Task::promise_type']]],
+  ['getactiveworkercount_1',['getactiveworkercount',['../classscheduler_1_1MetricsCollectorImpl.html#ac3f71d7a46eb957ade3dd0f95c7a54aa',1,'scheduler::MetricsCollectorImpl::getActiveWorkerCount()'],['../classscheduler_1_1IMetricsCollector.html#aab8d0569df44035c7c7bf7eaeae7c12a',1,'scheduler::IMetricsCollector::getActiveWorkerCount()']]],
+  ['getallworkermetrics_2',['getallworkermetrics',['../classscheduler_1_1MetricsCollectorImpl.html#aa1aa1622cbbc37e53d7474601fac5377',1,'scheduler::MetricsCollectorImpl::getAllWorkerMetrics()'],['../classscheduler_1_1IMetricsCollector.html#a83e9ec5d91311fb90cf4d8e4cc82b35c',1,'scheduler::IMetricsCollector::getAllWorkerMetrics()']]],
+  ['getperformancemetrics_3',['getperformancemetrics',['../classscheduler_1_1MetricsCollectorImpl.html#a05ea728b8a46d4d5d8988b726f138e61',1,'scheduler::MetricsCollectorImpl::getPerformanceMetrics()'],['../classscheduler_1_1IMetricsCollector.html#ad4449bc432e6f54cbf0d521c675174c7',1,'scheduler::IMetricsCollector::getPerformanceMetrics()']]],
+  ['getqueuestatus_4',['getqueuestatus',['../classscheduler_1_1MetricsCollectorImpl.html#a33c7f363de99bd276ddd30f674969ea2',1,'scheduler::MetricsCollectorImpl::getQueueStatus()'],['../classscheduler_1_1IMetricsCollector.html#a30d48a84ef446dd9370681a978934f9e',1,'scheduler::IMetricsCollector::getQueueStatus()']]],
+  ['gettotalworkercount_5',['gettotalworkercount',['../classscheduler_1_1MetricsCollectorImpl.html#a9aa8eece92c0a6772f8ad16508a7f400',1,'scheduler::MetricsCollectorImpl::getTotalWorkerCount()'],['../classscheduler_1_1IMetricsCollector.html#a3db8ac6cd06a87c78b312e4ebb4bec7a',1,'scheduler::IMetricsCollector::getTotalWorkerCount()']]],
+  ['getworkermetrics_6',['getworkermetrics',['../classscheduler_1_1MetricsCollectorImpl.html#a28fecdcf909a74c4bdebe68e27b32b32',1,'scheduler::MetricsCollectorImpl::getWorkerMetrics()'],['../classscheduler_1_1IMetricsCollector.html#a40b723bc8984f394e2072d70ff70403c',1,'scheduler::IMetricsCollector::getWorkerMetrics()']]]
 ];

@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['pop_0',['pop',['../classscheduler_1_1WorkStealingDeque.html#a8159256d63e6c83f7c20f68516fcd15d',1,'scheduler::WorkStealingDeque']]],
-  ['priority_1',['Priority',['../namespacescheduler.html#a6020eef42dbfa7acacbb93325b9bc09f',1,'scheduler']]],
-  ['priority_2ehpp_2',['priority.hpp',['../priority_8hpp.html',1,'']]],
-  ['promise_5ftype_3',['promise_type',['../structscheduler_1_1Task_1_1promise__type.html',1,'scheduler::Task']]],
-  ['push_4',['push',['../classscheduler_1_1WorkStealingDeque.html#a55a4177c0eb7583c7912570d582051b2',1,'scheduler::WorkStealingDeque::push()'],['../classscheduler_1_1Worker.html#acda6b9d3bf279480d03c644118c74ba5',1,'scheduler::Worker::push()']]]
+  ['normal_0',['Normal',['../namespacescheduler.html#a6020eef42dbfa7acacbb93325b9bc09fa960b44c579bc2f6818d2daaf9e4c16f0',1,'scheduler']]],
+  ['normalpriorityqueued_1',['normalPriorityQueued',['../structscheduler_1_1WorkerMetrics.html#a1d450802137ca12d14d66e42884fdedc',1,'scheduler::WorkerMetrics']]],
+  ['normalprioritytotal_2',['normalPriorityTotal',['../structscheduler_1_1QueueStatus.html#a720617340f8a77b1d81a8157c6ba267b',1,'scheduler::QueueStatus']]]
 ];

@@ -2,11 +2,53 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="namespacescheduler" kind="namespace" language="C++">
     <compoundname>scheduler</compoundname>
+    <innerclass refid="classscheduler_1_1IMetricsCollector" prot="public">scheduler::IMetricsCollector</innerclass>
+    <innerclass refid="classscheduler_1_1MetricsCollectorImpl" prot="public">scheduler::MetricsCollectorImpl</innerclass>
+    <innerclass refid="structscheduler_1_1PerformanceMetrics" prot="public">scheduler::PerformanceMetrics</innerclass>
+    <innerclass refid="structscheduler_1_1QueueStatus" prot="public">scheduler::QueueStatus</innerclass>
     <innerclass refid="classscheduler_1_1Scheduler" prot="public">scheduler::Scheduler</innerclass>
     <innerclass refid="classscheduler_1_1Task" prot="public">scheduler::Task</innerclass>
     <innerclass refid="classscheduler_1_1Worker" prot="public">scheduler::Worker</innerclass>
+    <innerclass refid="structscheduler_1_1WorkerMetrics" prot="public">scheduler::WorkerMetrics</innerclass>
     <innerclass refid="classscheduler_1_1WorkStealingDeque" prot="public">scheduler::WorkStealingDeque</innerclass>
     <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacescheduler_1ac131b57cde4999e70e412da516a18c01" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>WorkerStatus</name>
+        <qualifiedname>scheduler::WorkerStatus</qualifiedname>
+        <enumvalue id="namespacescheduler_1ac131b57cde4999e70e412da516a18c01a4d3d769b812b6faa6b76e1a8abaece2d" prot="public">
+          <name>Active</name>
+          <briefdescription>
+<para><ref refid="classscheduler_1_1Worker" kindref="compound">Worker</ref> is actively processing tasks. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacescheduler_1ac131b57cde4999e70e412da516a18c01ae599161956d626eda4cb0a5ffb85271c" prot="public">
+          <name>Idle</name>
+          <briefdescription>
+<para><ref refid="classscheduler_1_1Worker" kindref="compound">Worker</ref> is idle, awaiting tasks or steals. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacescheduler_1ac131b57cde4999e70e412da516a18c01a8bf906833cc7aea8084f552217ed9c1d" prot="public">
+          <name>Suspended</name>
+          <briefdescription>
+<para><ref refid="classscheduler_1_1Worker" kindref="compound">Worker</ref> is temporarily suspended. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration for worker status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="13" column="1" bodyfile="include/scheduler/metrics.hpp" bodystart="13" bodyend="17"/>
+      </memberdef>
       <memberdef kind="enum" id="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09f" prot="public" static="no" strong="yes">
         <type></type>
         <name>Priority</name>

@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structscheduler_1_1PerformanceMetrics" kind="struct" language="C++" prot="public">
+    <compoundname>scheduler::PerformanceMetrics</compoundname>
+    <includes refid="metrics_8hpp" local="no">metrics.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structscheduler_1_1PerformanceMetrics_1abfcbd4876d6c9e9b909d3bc7f04f19a7" prot="public" static="no" mutable="no">
+        <type>std::chrono::nanoseconds</type>
+        <definition>std::chrono::nanoseconds scheduler::PerformanceMetrics::uptime</definition>
+        <argsstring></argsstring>
+        <name>uptime</name>
+        <qualifiedname>scheduler::PerformanceMetrics::uptime</qualifiedname>
+        <briefdescription>
+<para><ref refid="classscheduler_1_1Scheduler" kindref="compound">Scheduler</ref> uptime. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="47" column="30" bodyfile="include/scheduler/metrics.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1PerformanceMetrics_1ab3470c9ca992e4f1c4ed8b2d0f730e7f" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t scheduler::PerformanceMetrics::totalTasksProcessed</definition>
+        <argsstring></argsstring>
+        <name>totalTasksProcessed</name>
+        <qualifiedname>scheduler::PerformanceMetrics::totalTasksProcessed</qualifiedname>
+        <briefdescription>
+<para>Total tasks processed since startup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="48" column="14" bodyfile="include/scheduler/metrics.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1PerformanceMetrics_1acc6bf4ef8ca49219bd41088404e1b9e6" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t scheduler::PerformanceMetrics::totalTasksStolen</definition>
+        <argsstring></argsstring>
+        <name>totalTasksStolen</name>
+        <qualifiedname>scheduler::PerformanceMetrics::totalTasksStolen</qualifiedname>
+        <briefdescription>
+<para>Total steals since startup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="49" column="14" bodyfile="include/scheduler/metrics.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1PerformanceMetrics_1ab67dbbbb939ce9b1aee5589807373b81" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double scheduler::PerformanceMetrics::tasksPerSecond</definition>
+        <argsstring></argsstring>
+        <name>tasksPerSecond</name>
+        <qualifiedname>scheduler::PerformanceMetrics::tasksPerSecond</qualifiedname>
+        <briefdescription>
+<para>Current throughput (tasks/sec) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="50" column="12" bodyfile="include/scheduler/metrics.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1PerformanceMetrics_1afd249c9c1e7e4b21bfe6a21bcc77371c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double scheduler::PerformanceMetrics::stealsPerSecond</definition>
+        <argsstring></argsstring>
+        <name>stealsPerSecond</name>
+        <qualifiedname>scheduler::PerformanceMetrics::stealsPerSecond</qualifiedname>
+        <briefdescription>
+<para>Current steal rate (steals/sec) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="51" column="12" bodyfile="include/scheduler/metrics.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1PerformanceMetrics_1a8d5b95c5c00aab21e322d75aa110fdb9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double scheduler::PerformanceMetrics::averageLatency</definition>
+        <argsstring></argsstring>
+        <name>averageLatency</name>
+        <qualifiedname>scheduler::PerformanceMetrics::averageLatency</qualifiedname>
+        <briefdescription>
+<para>Average task latency in microseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="52" column="12" bodyfile="include/scheduler/metrics.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscheduler_1_1PerformanceMetrics_1a3961ea9b1a96ba943829ba0cdae7a0ae" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double scheduler::PerformanceMetrics::averageCpuUsage</definition>
+        <argsstring></argsstring>
+        <name>averageCpuUsage</name>
+        <qualifiedname>scheduler::PerformanceMetrics::averageCpuUsage</qualifiedname>
+        <briefdescription>
+<para>Average CPU usage across all workers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics.hpp" line="53" column="12" bodyfile="include/scheduler/metrics.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Performance metrics for the scheduler. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/scheduler/metrics.hpp" line="46" column="1" bodyfile="include/scheduler/metrics.hpp" bodystart="46" bodyend="54"/>
+    <listofallmembers>
+      <member refid="structscheduler_1_1PerformanceMetrics_1a3961ea9b1a96ba943829ba0cdae7a0ae" prot="public" virt="non-virtual"><scope>scheduler::PerformanceMetrics</scope><name>averageCpuUsage</name></member>
+      <member refid="structscheduler_1_1PerformanceMetrics_1a8d5b95c5c00aab21e322d75aa110fdb9" prot="public" virt="non-virtual"><scope>scheduler::PerformanceMetrics</scope><name>averageLatency</name></member>
+      <member refid="structscheduler_1_1PerformanceMetrics_1afd249c9c1e7e4b21bfe6a21bcc77371c" prot="public" virt="non-virtual"><scope>scheduler::PerformanceMetrics</scope><name>stealsPerSecond</name></member>
+      <member refid="structscheduler_1_1PerformanceMetrics_1ab67dbbbb939ce9b1aee5589807373b81" prot="public" virt="non-virtual"><scope>scheduler::PerformanceMetrics</scope><name>tasksPerSecond</name></member>
+      <member refid="structscheduler_1_1PerformanceMetrics_1ab3470c9ca992e4f1c4ed8b2d0f730e7f" prot="public" virt="non-virtual"><scope>scheduler::PerformanceMetrics</scope><name>totalTasksProcessed</name></member>
+      <member refid="structscheduler_1_1PerformanceMetrics_1acc6bf4ef8ca49219bd41088404e1b9e6" prot="public" virt="non-virtual"><scope>scheduler::PerformanceMetrics</scope><name>totalTasksStolen</name></member>
+      <member refid="structscheduler_1_1PerformanceMetrics_1abfcbd4876d6c9e9b909d3bc7f04f19a7" prot="public" virt="non-virtual"><scope>scheduler::PerformanceMetrics</scope><name>uptime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

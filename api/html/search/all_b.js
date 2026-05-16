@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['resume_0',['resume',['../classscheduler_1_1Task.html#a4bc9133beeefb258806444039be4505b',1,'scheduler::Task']]],
-  ['return_5fvoid_1',['return_void',['../structscheduler_1_1Task_1_1promise__type.html#ae271e801e15d2ce3d8dadc98c9543a3d',1,'scheduler::Task::promise_type']]]
+  ['operator_3d_0',['operator=',['../classscheduler_1_1Task.html#a3758dee2adb4ba129c843042e2df41b1',1,'scheduler::Task::operator=(const Task &amp;)=delete'],['../classscheduler_1_1Task.html#a6d558087fbb759a03e6faf9a0a4be1d1',1,'scheduler::Task::operator=(Task &amp;&amp;other) noexcept'],['../classscheduler_1_1Worker.html#af4d9510d50a1ed4f78e927120ffa3fba',1,'scheduler::Worker::operator=()']]]
 ];

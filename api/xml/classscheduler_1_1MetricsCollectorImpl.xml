@@ -1,0 +1,482 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classscheduler_1_1MetricsCollectorImpl" kind="class" language="C++" prot="public">
+    <compoundname>scheduler::MetricsCollectorImpl</compoundname>
+    <basecompoundref refid="classscheduler_1_1IMetricsCollector" prot="public" virt="non-virtual">scheduler::IMetricsCollector</basecompoundref>
+    <includes refid="metrics-impl_8hpp" local="no">metrics-impl.hpp</includes>
+    <innerclass refid="structscheduler_1_1MetricsCollectorImpl_1_1WorkerData" prot="private">scheduler::MetricsCollectorImpl::WorkerData</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classscheduler_1_1MetricsCollectorImpl_1a9456cb1a06f77d0480eedcb3b5d2ee45" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; WorkerData &gt;</type>
+        <definition>std::vector&lt;WorkerData&gt; scheduler::MetricsCollectorImpl::workerData_</definition>
+        <argsstring></argsstring>
+        <name>workerData_</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::workerData_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="32" column="17" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classscheduler_1_1MetricsCollectorImpl_1a020de5317dfd532cd146880a2b3ede2d" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; uint64_t &gt;</type>
+        <definition>std::atomic&lt;uint64_t&gt; scheduler::MetricsCollectorImpl::totalTasksProcessed_</definition>
+        <argsstring></argsstring>
+        <name>totalTasksProcessed_</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::totalTasksProcessed_</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="33" column="17" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="variable" id="classscheduler_1_1MetricsCollectorImpl_1a732d3f372accf2921028878c7425e88c" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; uint64_t &gt;</type>
+        <definition>std::atomic&lt;uint64_t&gt; scheduler::MetricsCollectorImpl::totalTasksStolen_</definition>
+        <argsstring></argsstring>
+        <name>totalTasksStolen_</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::totalTasksStolen_</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="34" column="17" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="variable" id="classscheduler_1_1MetricsCollectorImpl_1aa47929378b9eb6a9a22abecc8b60c81c" prot="private" static="no" mutable="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point scheduler::MetricsCollectorImpl::startTime_</definition>
+        <argsstring></argsstring>
+        <name>startTime_</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::startTime_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="35" column="43" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classscheduler_1_1MetricsCollectorImpl_1a81b817b55746ec51aa913d692141d101" prot="private" static="no" mutable="yes">
+        <type>std::mutex</type>
+        <definition>std::mutex scheduler::MetricsCollectorImpl::dataMutex_</definition>
+        <argsstring></argsstring>
+        <name>dataMutex_</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::dataMutex_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="36" column="24" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classscheduler_1_1MetricsCollectorImpl_1a49070101dc235f9bdb88a99a4c091c79" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; scheduler::MetricsCollectorImpl::metricsEnabled_</definition>
+        <argsstring></argsstring>
+        <name>metricsEnabled_</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::metricsEnabled_</qualifiedname>
+        <initializer>{true}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="37" column="17" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1acce712d13e2a6385e89f7f5100cd35d3" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>scheduler::MetricsCollectorImpl::MetricsCollectorImpl</definition>
+        <argsstring>(uint32_t workerCount)</argsstring>
+        <name>MetricsCollectorImpl</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::MetricsCollectorImpl</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>workerCount</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>workerCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of workers to track </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="44" column="14" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="44" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1a28fecdcf909a74c4bdebe68e27b32b32" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="structscheduler_1_1WorkerMetrics" kindref="compound">WorkerMetrics</ref></type>
+        <definition>WorkerMetrics scheduler::MetricsCollectorImpl::getWorkerMetrics</definition>
+        <argsstring>(uint32_t workerId) const override</argsstring>
+        <name>getWorkerMetrics</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::getWorkerMetrics</qualifiedname>
+        <reimplements refid="classscheduler_1_1IMetricsCollector_1a40b723bc8984f394e2072d70ff70403c">getWorkerMetrics</reimplements>
+        <param>
+          <type>uint32_t</type>
+          <declname>workerId</declname>
+        </param>
+        <briefdescription>
+<para>Get metrics for a specific worker. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>workerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The worker ID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structscheduler_1_1WorkerMetrics" kindref="compound">WorkerMetrics</ref> for the specified worker </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="47" column="19" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="47" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1aa1aa1622cbbc37e53d7474601fac5377" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; <ref refid="structscheduler_1_1WorkerMetrics" kindref="compound">WorkerMetrics</ref> &gt;</type>
+        <definition>std::vector&lt; WorkerMetrics &gt; scheduler::MetricsCollectorImpl::getAllWorkerMetrics</definition>
+        <argsstring>() const override</argsstring>
+        <name>getAllWorkerMetrics</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::getAllWorkerMetrics</qualifiedname>
+        <reimplements refid="classscheduler_1_1IMetricsCollector_1a83e9ec5d91311fb90cf4d8e4cc82b35c">getAllWorkerMetrics</reimplements>
+        <briefdescription>
+<para>Get metrics for all workers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vector of <ref refid="structscheduler_1_1WorkerMetrics" kindref="compound">WorkerMetrics</ref> for all workers </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="66" column="17" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="66" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1a33c7f363de99bd276ddd30f674969ea2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="structscheduler_1_1QueueStatus" kindref="compound">QueueStatus</ref></type>
+        <definition>QueueStatus scheduler::MetricsCollectorImpl::getQueueStatus</definition>
+        <argsstring>() const override</argsstring>
+        <name>getQueueStatus</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::getQueueStatus</qualifiedname>
+        <reimplements refid="classscheduler_1_1IMetricsCollector_1a30d48a84ef446dd9370681a978934f9e">getQueueStatus</reimplements>
+        <briefdescription>
+<para>Get global queue status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current queue status snapshot </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="87" column="17" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="87" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1a05ea728b8a46d4d5d8988b726f138e61" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="structscheduler_1_1PerformanceMetrics" kindref="compound">PerformanceMetrics</ref></type>
+        <definition>PerformanceMetrics scheduler::MetricsCollectorImpl::getPerformanceMetrics</definition>
+        <argsstring>() const override</argsstring>
+        <name>getPerformanceMetrics</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::getPerformanceMetrics</qualifiedname>
+        <reimplements refid="classscheduler_1_1IMetricsCollector_1ad4449bc432e6f54cbf0d521c675174c7">getPerformanceMetrics</reimplements>
+        <briefdescription>
+<para>Get performance metrics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current performance metrics snapshot </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="109" column="24" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="109" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1ac3f71d7a46eb957ade3dd0f95c7a54aa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t scheduler::MetricsCollectorImpl::getActiveWorkerCount</definition>
+        <argsstring>() const override</argsstring>
+        <name>getActiveWorkerCount</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::getActiveWorkerCount</qualifiedname>
+        <reimplements refid="classscheduler_1_1IMetricsCollector_1aab8d0569df44035c7c7bf7eaeae7c12a">getActiveWorkerCount</reimplements>
+        <briefdescription>
+<para>Get number of active workers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Count of workers with Active status </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="132" column="14" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="132" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1a9aa8eece92c0a6772f8ad16508a7f400" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t scheduler::MetricsCollectorImpl::getTotalWorkerCount</definition>
+        <argsstring>() const override</argsstring>
+        <name>getTotalWorkerCount</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::getTotalWorkerCount</qualifiedname>
+        <reimplements refid="classscheduler_1_1IMetricsCollector_1a3db8ac6cd06a87c78b312e4ebb4bec7a">getTotalWorkerCount</reimplements>
+        <briefdescription>
+<para>Get total number of workers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Total worker count </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="138" column="14" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="138" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1a579077a6bbb19e1925532a9b17f0b519" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void scheduler::MetricsCollectorImpl::resetCounters</definition>
+        <argsstring>() override</argsstring>
+        <name>resetCounters</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::resetCounters</qualifiedname>
+        <reimplements refid="classscheduler_1_1IMetricsCollector_1a1483088c5aea4d31639f9dfe0a0c6d22">resetCounters</reimplements>
+        <briefdescription>
+<para>Reset performance counters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="142" column="10" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="142" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1a04c22d6023ee759f26ccb7e8d5a42c4d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool scheduler::MetricsCollectorImpl::isMetricsEnabled</definition>
+        <argsstring>() const override</argsstring>
+        <name>isMetricsEnabled</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::isMetricsEnabled</qualifiedname>
+        <reimplements refid="classscheduler_1_1IMetricsCollector_1aabf4eb1b5acd5446f199c809f2cb3aa5">isMetricsEnabled</reimplements>
+        <briefdescription>
+<para>Check if metrics collection is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if metrics collection is active </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="153" column="10" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="153" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1abcdc81024d53e295d5d15f9bba65aeb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void scheduler::MetricsCollectorImpl::setMetricsEnabled</definition>
+        <argsstring>(bool enable) override</argsstring>
+        <name>setMetricsEnabled</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::setMetricsEnabled</qualifiedname>
+        <reimplements refid="classscheduler_1_1IMetricsCollector_1aeac1551e21281c68dc74e702c006443a">setMetricsEnabled</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Enable or disable metrics collection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true to enable, false to disable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="157" column="10" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="157" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1a5bf4208916ae2a80b8428c92a82ba7d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduler::MetricsCollectorImpl::updateWorkerStatus</definition>
+        <argsstring>(uint32_t workerId, WorkerStatus status)</argsstring>
+        <name>updateWorkerStatus</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::updateWorkerStatus</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>workerId</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacescheduler_1ac131b57cde4999e70e412da516a18c01" kindref="member">WorkerStatus</ref></type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="162" column="10" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="162" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1a4f7ed0e6de882a50d570132fe1a8a8d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduler::MetricsCollectorImpl::recordTaskCompletion</definition>
+        <argsstring>(uint32_t workerId)</argsstring>
+        <name>recordTaskCompletion</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::recordTaskCompletion</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>workerId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="169" column="10" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="169" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1a057685ed0bc3a21626a240fcb8c5edb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduler::MetricsCollectorImpl::recordTaskStolen</definition>
+        <argsstring>(uint32_t workerId)</argsstring>
+        <name>recordTaskStolen</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::recordTaskStolen</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>workerId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="177" column="10" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="177" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1ae94a69b35a4b75cd903ee20ffe0332e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduler::MetricsCollectorImpl::setQueueSize</definition>
+        <argsstring>(uint32_t workerId, Priority priority, uint32_t size)</argsstring>
+        <name>setQueueSize</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::setQueueSize</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>workerId</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacescheduler_1a6020eef42dbfa7acacbb93325b9bc09f" kindref="member">Priority</ref></type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="185" column="10" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="185" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classscheduler_1_1MetricsCollectorImpl_1a073d465d67f7a15a4f4ef47904568b79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduler::MetricsCollectorImpl::setCpuUsage</definition>
+        <argsstring>(uint32_t workerId, double usage)</argsstring>
+        <name>setCpuUsage</name>
+        <qualifiedname>scheduler::MetricsCollectorImpl::setCpuUsage</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>workerId</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>usage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/scheduler/metrics-impl.hpp" line="202" column="10" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="202" bodyend="207"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Example implementation of <ref refid="classscheduler_1_1IMetricsCollector" kindref="compound">IMetricsCollector</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is a reference implementation showing how to collect and expose scheduler metrics for the dashboard. In production, integrate this with your actual scheduler implementation. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>scheduler::IMetricsCollector</label>
+        <link refid="classscheduler_1_1IMetricsCollector"/>
+      </node>
+      <node id="1">
+        <label>scheduler::MetricsCollectorImpl</label>
+        <link refid="classscheduler_1_1MetricsCollectorImpl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>scheduler::IMetricsCollector</label>
+        <link refid="classscheduler_1_1IMetricsCollector"/>
+      </node>
+      <node id="1">
+        <label>scheduler::MetricsCollectorImpl</label>
+        <link refid="classscheduler_1_1MetricsCollectorImpl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/scheduler/metrics-impl.hpp" line="20" column="1" bodyfile="include/scheduler/metrics-impl.hpp" bodystart="20" bodyend="208"/>
+    <listofallmembers>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a81b817b55746ec51aa913d692141d101" prot="private" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>dataMutex_</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1ac3f71d7a46eb957ade3dd0f95c7a54aa" prot="public" virt="virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>getActiveWorkerCount</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1aa1aa1622cbbc37e53d7474601fac5377" prot="public" virt="virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>getAllWorkerMetrics</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a05ea728b8a46d4d5d8988b726f138e61" prot="public" virt="virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>getPerformanceMetrics</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a33c7f363de99bd276ddd30f674969ea2" prot="public" virt="virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>getQueueStatus</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a9aa8eece92c0a6772f8ad16508a7f400" prot="public" virt="virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>getTotalWorkerCount</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a28fecdcf909a74c4bdebe68e27b32b32" prot="public" virt="virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>getWorkerMetrics</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a04c22d6023ee759f26ccb7e8d5a42c4d" prot="public" virt="virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>isMetricsEnabled</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1acce712d13e2a6385e89f7f5100cd35d3" prot="public" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>MetricsCollectorImpl</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a49070101dc235f9bdb88a99a4c091c79" prot="private" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>metricsEnabled_</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a4f7ed0e6de882a50d570132fe1a8a8d6" prot="public" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>recordTaskCompletion</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a057685ed0bc3a21626a240fcb8c5edb2" prot="public" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>recordTaskStolen</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a579077a6bbb19e1925532a9b17f0b519" prot="public" virt="virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>resetCounters</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a073d465d67f7a15a4f4ef47904568b79" prot="public" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>setCpuUsage</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1abcdc81024d53e295d5d15f9bba65aeb1" prot="public" virt="virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>setMetricsEnabled</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1ae94a69b35a4b75cd903ee20ffe0332e5" prot="public" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>setQueueSize</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1aa47929378b9eb6a9a22abecc8b60c81c" prot="private" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>startTime_</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a020de5317dfd532cd146880a2b3ede2d" prot="private" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>totalTasksProcessed_</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a732d3f372accf2921028878c7425e88c" prot="private" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>totalTasksStolen_</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a5bf4208916ae2a80b8428c92a82ba7d7" prot="public" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>updateWorkerStatus</name></member>
+      <member refid="classscheduler_1_1MetricsCollectorImpl_1a9456cb1a06f77d0480eedcb3b5d2ee45" prot="private" virt="non-virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>workerData_</name></member>
+      <member refid="classscheduler_1_1IMetricsCollector_1a4584ed1d9a59e114dbaeca7a0cbe80c6" prot="public" virt="virtual"><scope>scheduler::MetricsCollectorImpl</scope><name>~IMetricsCollector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

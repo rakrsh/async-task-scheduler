@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['scheduler_0',['Scheduler',['../classscheduler_1_1Scheduler.html',1,'scheduler']]]
+  ['metricscollectorimpl_0',['MetricsCollectorImpl',['../classscheduler_1_1MetricsCollectorImpl.html',1,'scheduler']]]
 ];

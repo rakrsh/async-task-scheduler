@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['pop_0',['pop',['../classscheduler_1_1WorkStealingDeque.html#a8159256d63e6c83f7c20f68516fcd15d',1,'scheduler::WorkStealingDeque']]],
-  ['push_1',['push',['../classscheduler_1_1WorkStealingDeque.html#a55a4177c0eb7583c7912570d582051b2',1,'scheduler::WorkStealingDeque::push()'],['../classscheduler_1_1Worker.html#acda6b9d3bf279480d03c644118c74ba5',1,'scheduler::Worker::push()']]]
+  ['operator_3d_0',['operator=',['../classscheduler_1_1Task.html#a3758dee2adb4ba129c843042e2df41b1',1,'scheduler::Task::operator=(const Task &amp;)=delete'],['../classscheduler_1_1Task.html#a6d558087fbb759a03e6faf9a0a4be1d1',1,'scheduler::Task::operator=(Task &amp;&amp;other) noexcept'],['../classscheduler_1_1Worker.html#af4d9510d50a1ed4f78e927120ffa3fba',1,'scheduler::Worker::operator=()']]]
 ];
