@@ -48,22 +48,53 @@ The static site will be generated in the `site/` directory.
 
 ## 🛠️ Quick Start
 
-### Requirements
-- C++20 compliant compiler (MSVC 19.28+, GCC 10+, Clang 11+)
-- CMake 3.20+
-- [vcpkg](https://vcpkg.io/) (recommended) or Conan
+### One-Command Setup
 
-### Build Instructions
+Get the entire application running in one command:
+
+**Windows (PowerShell):**
 ```powershell
-# Install dependencies
-vcpkg install
-
-# Configure and build
-cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=[path/to/vcpkg]/scripts/buildsystems/vcpkg.cmake
-cmake --build build --config Release
+.\setup.ps1
 ```
 
-### Basic Usage
+**macOS / Linux (Bash):**
+```bash
+./setup.sh
+```
+
+**Any Platform (Node.js):**
+```bash
+node setup.js
+```
+
+The setup process will:
+- ✅ Check prerequisites (CMake, compiler, Node.js)
+- ✅ Install C++ and Node.js dependencies
+- ✅ Build the C++ scheduler
+- ✅ Install and configure the dashboard
+- ✅ Provide next steps
+
+### Running in Development Mode
+
+After initial setup, start everything with one command:
+
+```powershell
+# Windows
+.\setup.ps1 -Mode dev
+
+# macOS/Linux
+./setup.sh dev
+
+# Any platform
+node setup.js --dev
+```
+
+This opens:
+- 📊 Dashboard: http://localhost:3000
+- 📡 API Server: http://localhost:3001
+
+### Basic C++ Usage
+
 ```cpp
 #include <scheduler/scheduler.hpp>
 
@@ -75,6 +106,14 @@ int main() {
     return 0;
 }
 ```
+
+### Requirements
+- C++20 compliant compiler (MSVC 19.28+, GCC 10+, Clang 11+)
+- CMake 3.20+
+- Node.js 14+
+- Git
+
+See [QUICKSTART.md](docs/QUICKSTART.md) for detailed setup instructions and troubleshooting.
 
 ## 🧪 Testing & Benchmarking
 ```powershell
