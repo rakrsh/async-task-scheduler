@@ -45,6 +45,8 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Quick Start: QUICKSTART.md
+  - Setup System: setup-system.md
   - User Guide: user-guide.md
   - Dashboard:
       - Overview: dashboard.md

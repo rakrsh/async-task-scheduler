@@ -1,0 +1,56 @@
+# Git attributes for cross-platform consistency
+
+# Shell scripts - always use LF
+*.sh text eol=lf
+*.bash text eol=lf
+setup.sh text eol=lf
+
+# PowerShell scripts - always use CRLF
+*.ps1 text eol=crlf
+*.psm1 text eol=crlf
+*.psd1 text eol=crlf
+
+# Batch files - always use CRLF  
+*.bat text eol=crlf
+*.cmd text eol=crlf
+launch.bat text eol=crlf
+
+# Node.js - normalize to LF
+*.js text eol=lf
+*.json text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+
+# C++ source - normalize to LF
+*.cpp text eol=lf
+*.hpp text eol=lf
+*.cc text eol=lf
+*.h text eol=lf
+
+# CMake - normalize to LF
+CMakeLists.txt text eol=lf
+*.cmake text eol=lf
+
+# Markdown - normalize to LF
+*.md text eol=lf
+
+# Documentation - normalize to LF
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Binaries
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+*.o binary
+
+# Ensure scripts are executable after checkout
+setup.sh export-ignore
+setup.ps1 export-ignore
+setup.js export-ignore
+launch.bat export-ignore
