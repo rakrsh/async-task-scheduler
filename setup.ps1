@@ -43,22 +43,22 @@ function Write-Header {
 
 function Write-Success {
     param([string]$Message)
-    Write-Host "✓ $Message" -ForegroundColor Green
+    Write-Host "[+] $Message" -ForegroundColor Green
 }
 
 function Write-Error {
     param([string]$Message)
-    Write-Host "✗ $Message" -ForegroundColor Red
+    Write-Host "[-] $Message" -ForegroundColor Red
 }
 
 function Write-Warning {
     param([string]$Message)
-    Write-Host "⚠ $Message" -ForegroundColor Yellow
+    Write-Host "[!] $Message" -ForegroundColor Yellow
 }
 
 function Write-Info {
     param([string]$Message)
-    Write-Host "ℹ $Message" -ForegroundColor Blue
+    Write-Host "[*] $Message" -ForegroundColor Blue
 }
 
 # Check prerequisites
@@ -362,39 +362,37 @@ function Run-Clean {
 
 # Display completion message
 function Display-CompletionMessage {
-    Write-Host @"
-`n$(Write-Host '╔' -NoNewline -ForegroundColor Green)$('═' * 58)$(Write-Host '╗' -ForegroundColor Green)
-$(Write-Host '║' -NoNewline -ForegroundColor Green) Setup Complete! $(Write-Host '║' -ForegroundColor Green)
-$(Write-Host '╚' -NoNewline -ForegroundColor Green)$('═' * 58)$(Write-Host '╝' -ForegroundColor Green)
-
-📊 Async Task Scheduler with Dashboard
-
-Next Steps:
-
-  1. Run the application:
-     .\setup.ps1 -Mode run
-
-  2. Start in development mode:
-     .\setup.ps1 -Mode dev
-
-  3. Access the dashboard:
-     → Browser: http://localhost:3000
-     → API: http://localhost:3001
-
-  4. Build only (without running):
-     .\setup.ps1 -Mode build
-
-  5. Clean build artifacts:
-     .\setup.ps1 -Mode clean
-
-Documentation:
-  → Main docs: http://localhost:8000 (after 'mkdocs serve')
-  → Dashboard: docs/dashboard.md
-  → Integration: docs/integration-guide.md
-
-Happy scheduling! 🚀
-
-"@
+    Write-Host ""
+    Write-Host "+========================================================+" -ForegroundColor Green
+    Write-Host "|          Setup Complete!                               |" -ForegroundColor Green
+    Write-Host "+========================================================+" -ForegroundColor Green
+    Write-Host ""
+    Write-Host "Async Task Scheduler with Dashboard"
+    Write-Host ""
+    Write-Host "Next Steps:"
+    Write-Host ""
+    Write-Host "  1. Run the application:"
+    Write-Host "     .\setup.ps1 -Mode run"
+    Write-Host ""
+    Write-Host "  2. Start in development mode:"
+    Write-Host "     .\setup.ps1 -Mode dev"
+    Write-Host ""
+    Write-Host "  3. Access the dashboard:"
+    Write-Host "     > Browser: http://localhost:3000"
+    Write-Host "     > API: http://localhost:3001"
+    Write-Host ""
+    Write-Host "  4. Build only (without running):"
+    Write-Host "     .\setup.ps1 -Mode build"
+    Write-Host ""
+    Write-Host "  5. Clean build artifacts:"
+    Write-Host "     .\setup.ps1 -Mode clean"
+    Write-Host ""
+    Write-Host "Documentation:"
+    Write-Host "  > Main docs: http://localhost:8000 (after 'mkdocs serve')"
+    Write-Host "  > Dashboard: docs/dashboard.md"
+    Write-Host "  > Integration: docs/integration-guide.md"
+    Write-Host ""
+    Write-Host "Happy scheduling!"
 }
 
 # Show help
