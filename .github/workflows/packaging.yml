@@ -1,0 +1,58 @@
+name: Build & Package
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+
+jobs:
+  package:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install vcpkg (if needed)
+        run: |
+          git clone --depth 1 https://github.com/microsoft/vcpkg.git vcpkg || true
+          if [ -f ./vcpkg/bootstrap-vcpkg.sh ]; then ./vcpkg/bootstrap-vcpkg.sh; fi
+          if [ -f ./vcpkg/bootstrap-vcpkg.bat ]; then .\\vcpkg\\bootstrap-vcpkg.bat; fi
+
+      - name: Install NSIS (Windows)
+        if: matrix.os == 'windows-latest'
+        run: |
+          choco install nsis -y
+          where makensis
+
+      - name: Build C++ project (CMake)
+        run: |
+          cmake -B build -S . -DCMAKE_BUILD_TYPE=Release || true
+          cmake --build build --config Release --parallel || true
+
+      - name: Build UI
+        run: |
+          cd ui
+          npm ci --no-audit --no-fund
+          npm run build --workspace=client || npm --prefix client run build
+
+      - name: Package artifacts
+        run: |
+          mkdir -p dist
+          if [ "${{ matrix.os }}" = "windows-latest" ]; then
+            powershell -ExecutionPolicy Bypass -File .\\packaging\\windows\\package.ps1 -BuildDir build -UiDir ui -OutDir dist
+          else
+            bash packaging/package.sh $(pwd)/build $(pwd)/ui dist
+          fi
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: scheduler-packages-${{ matrix.os }}
+          path: dist
