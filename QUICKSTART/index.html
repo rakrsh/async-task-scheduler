@@ -1,0 +1,2109 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="High-performance C++20 Asynchronous Task Scheduler with Work-Stealing and Coroutines.">
+      
+      
+        <meta name="author" content="Antigravity AI">
+      
+      
+        <link rel="canonical" href="https://your-domain.com/async-task-scheduler/QUICKSTART/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../setup-system/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Quick Start - Async Task Scheduler</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quick-start-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Async Task Scheduler" class="md-header__button md-logo" aria-label="Async Task Scheduler" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Async Task Scheduler
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quick Start
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Quick Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../setup-system/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Setup System
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../user-guide/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  User Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dashboard/" class="md-tabs__link">
+          
+  
+  
+  Dashboard
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../api/" class="md-tabs__link">
+          
+  
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../agent-manual/" class="md-tabs__link">
+          
+  
+  
+  AI & Agents
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../architecture/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Async Task Scheduler" class="md-nav__button md-logo" aria-label="Async Task Scheduler" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Async Task Scheduler
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#one-command-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 One-Command Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 One-Command Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows (PowerShell)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos-linux-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS / Linux (Bash)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-platform-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Platform (Node.js)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Available Commands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Available Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#full-setup-recommended-first-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Setup (Recommended First Time)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-already-built-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run Already-Built Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-build-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clean Build Artifacts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-during-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 What Happens During Setup?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 Accessing the Application
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Prerequisites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-ubuntudebian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux (Ubuntu/Debian)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🆘 Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🆘 Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmake-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CMake not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-compiler-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C++ compiler not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodejs-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node.js not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vcpkg-bootstrap-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vcpkg bootstrap fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-already-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Port already in use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-fails-with-linking-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build fails with linking errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-shows-connection-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard shows "Connection Error"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎓 Understanding the Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📞 Getting Help
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dashboard
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/scheduler_scheduler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scheduler::Scheduler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/scheduler_task/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scheduler::Task
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/scheduler_task_promise_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scheduler::Task::promise_type
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/scheduler_worker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scheduler::Worker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/scheduler_workstealingdeque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scheduler::WorkStealingDeque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI & Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI & Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#one-command-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 One-Command Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 One-Command Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows (PowerShell)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos-linux-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS / Linux (Bash)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-platform-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Platform (Node.js)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Available Commands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Available Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#full-setup-recommended-first-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Setup (Recommended First Time)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-already-built-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run Already-Built Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-build-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clean Build Artifacts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-during-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 What Happens During Setup?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 Accessing the Application
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Prerequisites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-ubuntudebian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux (Ubuntu/Debian)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🆘 Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🆘 Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmake-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CMake not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-compiler-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C++ compiler not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodejs-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node.js not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vcpkg-bootstrap-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vcpkg bootstrap fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-already-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Port already in use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-fails-with-linking-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build fails with linking errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-shows-connection-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard shows "Connection Error"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎓 Understanding the Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📞 Getting Help
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="quick-start-guide">Quick Start Guide<a class="headerlink" href="#quick-start-guide" title="Permanent link">&para;</a></h1>
+<p>Get up and running with the Async Task Scheduler in minutes!</p>
+<h2 id="one-command-setup">🚀 One-Command Setup<a class="headerlink" href="#one-command-setup" title="Permanent link">&para;</a></h2>
+<p>Choose your platform:</p>
+<h3 id="windows-powershell">Windows (PowerShell)<a class="headerlink" href="#windows-powershell" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.\</span><span class="n">setup</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+<p>Or use the batch launcher:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>launch.bat setup
+</code></pre></div></p>
+<h3 id="macos-linux-bash">macOS / Linux (Bash)<a class="headerlink" href="#macos-linux-bash" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>setup.sh
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>./setup.sh
+</code></pre></div>
+<h3 id="cross-platform-nodejs">Cross-Platform (Node.js)<a class="headerlink" href="#cross-platform-nodejs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>node<span class="w"> </span>setup.js
+</code></pre></div>
+<h2 id="available-commands">📋 Available Commands<a class="headerlink" href="#available-commands" title="Permanent link">&para;</a></h2>
+<h3 id="full-setup-recommended-first-time">Full Setup (Recommended First Time)<a class="headerlink" href="#full-setup-recommended-first-time" title="Permanent link">&para;</a></h3>
+<p>Installs all dependencies and builds the project.</p>
+<p><strong>PowerShell:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.\</span><span class="n">setup</span><span class="p">.</span><span class="n">ps1</span>                    <span class="c"># Default: full setup</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">.\</span><span class="n">setup</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Mode</span> <span class="n">setup</span>        <span class="c"># Explicit setup mode</span>
+</code></pre></div></p>
+<p><strong>Bash:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./setup.sh<span class="w">                     </span><span class="c1"># Default: full setup</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>./setup.sh<span class="w"> </span><span class="nb">help</span><span class="w">                </span><span class="c1"># Show help</span>
+</code></pre></div></p>
+<p><strong>Node.js:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>node<span class="w"> </span>setup.js<span class="w">                  </span><span class="c1"># Default: full setup</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>node<span class="w"> </span>setup.js<span class="w"> </span>--help<span class="w">           </span><span class="c1"># Show help</span>
+</code></pre></div></p>
+<p><strong>Batch (Windows):</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>launch.bat setup
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>launch.bat help
+</code></pre></div></p>
+<h3 id="development-mode">Development Mode<a class="headerlink" href="#development-mode" title="Permanent link">&para;</a></h3>
+<p>Runs full setup then starts the application with hot-reload.</p>
+<p><strong>PowerShell:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.\</span><span class="n">setup</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Mode</span> <span class="n">dev</span>
+</code></pre></div></p>
+<p><strong>Bash:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./setup.sh<span class="w"> </span>dev
+</code></pre></div></p>
+<p><strong>Node.js:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>node<span class="w"> </span>setup.js<span class="w"> </span>--dev
+</code></pre></div></p>
+<p><strong>Batch:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>launch.bat dev
+</code></pre></div></p>
+<h3 id="build-only">Build Only<a class="headerlink" href="#build-only" title="Permanent link">&para;</a></h3>
+<p>Builds the C++ project without running anything.</p>
+<p><strong>PowerShell:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">.\</span><span class="n">setup</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Mode</span> <span class="n">build</span>
+</code></pre></div></p>
+<p><strong>Bash:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>./setup.sh<span class="w"> </span>build
+</code></pre></div></p>
+<p><strong>Node.js:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>node<span class="w"> </span>setup.js<span class="w"> </span>--build
+</code></pre></div></p>
+<p><strong>Batch:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>launch.bat build
+</code></pre></div></p>
+<h3 id="run-already-built-project">Run Already-Built Project<a class="headerlink" href="#run-already-built-project" title="Permanent link">&para;</a></h3>
+<p>Starts the dashboard and API server (requires prior build).</p>
+<p><strong>PowerShell:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">.\</span><span class="n">setup</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Mode</span> <span class="n">run</span>
+</code></pre></div></p>
+<p><strong>Bash:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>./setup.sh<span class="w"> </span>run
+</code></pre></div></p>
+<p><strong>Node.js:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>node<span class="w"> </span>setup.js<span class="w"> </span>--run
+</code></pre></div></p>
+<p><strong>Batch:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>launch.bat run
+</code></pre></div></p>
+<h3 id="clean-build-artifacts">Clean Build Artifacts<a class="headerlink" href="#clean-build-artifacts" title="Permanent link">&para;</a></h3>
+<p>Removes all build directories and node_modules.</p>
+<p><strong>PowerShell:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">.\</span><span class="n">setup</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Mode</span> <span class="n">clean</span>
+</code></pre></div></p>
+<p><strong>Bash:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>./setup.sh<span class="w"> </span>clean
+</code></pre></div></p>
+<p><strong>Node.js:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>node<span class="w"> </span>setup.js<span class="w"> </span>--clean
+</code></pre></div></p>
+<p><strong>Batch:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>launch.bat clean
+</code></pre></div></p>
+<h2 id="what-happens-during-setup">🎯 What Happens During Setup?<a class="headerlink" href="#what-happens-during-setup" title="Permanent link">&para;</a></h2>
+<p>The setup process performs these steps in order:</p>
+<ol>
+<li><strong>Check Prerequisites</strong></li>
+<li>CMake (3.20+)</li>
+<li>C++ Compiler (MSVC 19.28+, GCC 10+, or Clang 11+)</li>
+<li>Node.js (14+)</li>
+<li>
+<p>vcpkg (optional, will be cloned if needed)</p>
+</li>
+<li>
+<p><strong>Install C++ Dependencies</strong></p>
+</li>
+<li>Initializes vcpkg if not present</li>
+<li>
+<p>Installs dependencies listed in <code>vcpkg.json</code></p>
+</li>
+<li>
+<p><strong>Install Node.js Dependencies</strong></p>
+</li>
+<li>Root <code>package.json</code> dependencies</li>
+<li>Server dependencies (<code>ui/server/package.json</code>)</li>
+<li>
+<p>Client dependencies (<code>ui/client/package.json</code>)</p>
+</li>
+<li>
+<p><strong>Build C++ Project</strong></p>
+</li>
+<li>Generates CMake build files with vcpkg toolchain</li>
+<li>Compiles scheduler, tests, and benchmarks</li>
+<li>
+<p>Outputs binaries to <code>build/Release/</code></p>
+</li>
+<li>
+<p><strong>Ready to Run</strong></p>
+</li>
+<li>Dashboard available at http://localhost:3000</li>
+<li>API server at http://localhost:3001</li>
+</ol>
+<h2 id="accessing-the-application">🌐 Accessing the Application<a class="headerlink" href="#accessing-the-application" title="Permanent link">&para;</a></h2>
+<p>After setup completes, open your browser:</p>
+<ul>
+<li><strong>Dashboard</strong>: http://localhost:3000</li>
+<li>Real-time task visualization</li>
+<li>
+<p>Worker metrics and performance graphs</p>
+</li>
+<li>
+<p><strong>API Documentation</strong>: http://localhost:3001/api/metrics</p>
+</li>
+<li>
+<p>REST endpoints for metrics</p>
+</li>
+<li>
+<p><strong>Main Documentation</strong>: http://localhost:8000 (run <code>mkdocs serve</code> in another terminal)</p>
+</li>
+<li>Architecture, guides, and API reference</li>
+</ul>
+<h2 id="prerequisites">🔧 Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://visualstudio.microsoft.com/">Visual Studio 2019+</a> or <a href="https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022">Build Tools for C++</a></li>
+<li><a href="https://cmake.org/download/">CMake 3.20+</a></li>
+<li><a href="https://nodejs.org/">Node.js 14+</a></li>
+</ul>
+<h3 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># Using Homebrew:</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>brew<span class="w"> </span>install<span class="w"> </span>cmake<span class="w"> </span>node
+</code></pre></div>
+<h3 id="linux-ubuntudebian">Linux (Ubuntu/Debian)<a class="headerlink" href="#linux-ubuntudebian" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>cmake<span class="w"> </span>build-essential<span class="w"> </span>nodejs<span class="w"> </span>npm
+</code></pre></div>
+<h2 id="troubleshooting">🆘 Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="cmake-not-found">CMake not found<a class="headerlink" href="#cmake-not-found" title="Permanent link">&para;</a></h3>
+<p><strong>Windows:</strong> Install from <a href="https://cmake.org/download/">cmake.org</a>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c"># Or via Chocolatey:</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="n">choco</span> <span class="n">install</span> <span class="n">cmake</span>
+</code></pre></div></p>
+<p><strong>macOS:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>brew<span class="w"> </span>install<span class="w"> </span>cmake
+</code></pre></div></p>
+<p><strong>Linux:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>cmake
+</code></pre></div></p>
+<h3 id="c-compiler-not-found">C++ compiler not found<a class="headerlink" href="#c-compiler-not-found" title="Permanent link">&para;</a></h3>
+<p><strong>Windows:</strong> Install <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio Community</a></p>
+<p><strong>macOS:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>xcode-select<span class="w"> </span>--install
+</code></pre></div></p>
+<p><strong>Linux (GCC):</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>build-essential
+</code></pre></div></p>
+<p><strong>Linux (Clang):</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>clang
+</code></pre></div></p>
+<h3 id="nodejs-not-found">Node.js not found<a class="headerlink" href="#nodejs-not-found" title="Permanent link">&para;</a></h3>
+<p>Install from <a href="https://nodejs.org/">nodejs.org</a> or:</p>
+<p><strong>macOS:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>brew<span class="w"> </span>install<span class="w"> </span>node
+</code></pre></div></p>
+<p><strong>Linux (Ubuntu/Debian):</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://deb.nodesource.com/setup_18.x<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>-E<span class="w"> </span>bash<span class="w"> </span>-
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>nodejs
+</code></pre></div></p>
+<h3 id="vcpkg-bootstrap-fails">vcpkg bootstrap fails<a class="headerlink" href="#vcpkg-bootstrap-fails" title="Permanent link">&para;</a></h3>
+<p>The setup script handles this automatically. If you encounter issues:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c"># Windows:</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="p">.\</span><span class="n">vcpkg</span><span class="p">\</span><span class="n">bootstrap-vcpkg</span><span class="p">.</span><span class="n">bat</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="c"># macOS/Linux:</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="p">./</span><span class="n">vcpkg</span><span class="p">/</span><span class="n">bootstrap-vcpkg</span><span class="p">.</span><span class="n">sh</span>
+</code></pre></div>
+<h3 id="port-already-in-use">Port already in use<a class="headerlink" href="#port-already-in-use" title="Permanent link">&para;</a></h3>
+<p>If ports 3000 or 3001 are already in use, you can change them:</p>
+<p><strong>Dashboard client:</strong>
+Edit <code>ui/client/src/components/Dashboard.js</code> and modify <code>REACT_APP_API_BASE</code></p>
+<p><strong>Server port:</strong>
+Edit <code>ui/server/.env</code> and change <code>PORT=3001</code> to another port</p>
+<h3 id="build-fails-with-linking-errors">Build fails with linking errors<a class="headerlink" href="#build-fails-with-linking-errors" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="c1"># Clean and rebuild from scratch:</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>.<span class="se">\s</span>etup.ps1<span class="w"> </span>-Mode<span class="w"> </span>clean<span class="w">  </span><span class="c1"># or ./setup.sh clean</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>.<span class="se">\s</span>etup.ps1<span class="w"> </span>-Mode<span class="w"> </span>build<span class="w">  </span><span class="c1"># or ./setup.sh build</span>
+</code></pre></div>
+<h3 id="dashboard-shows-connection-error">Dashboard shows "Connection Error"<a class="headerlink" href="#dashboard-shows-connection-error" title="Permanent link">&para;</a></h3>
+<p>Ensure the Express server is running:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="c1"># Check if server is listening:</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>curl<span class="w"> </span>http://localhost:3001/api/health
+</code></pre></div></p>
+<p>If not running, restart:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="p">.\</span><span class="n">setup</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Mode</span> <span class="n">run</span>  <span class="c"># or ./setup.sh run</span>
+</code></pre></div></p>
+<h2 id="next-steps">📚 Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Review the Architecture</strong></li>
+<li>
+<p>Read <a href="../docs/architecture.md">docs/architecture.md</a></p>
+</li>
+<li>
+<p><strong>Integrate with Your Scheduler</strong></p>
+</li>
+<li>
+<p>Follow <a href="../docs/integration-guide.md">docs/integration-guide.md</a></p>
+</li>
+<li>
+<p><strong>Explore the Metrics API</strong></p>
+</li>
+<li>
+<p>Visit <a href="../docs/dashboard.md">docs/dashboard.md</a></p>
+</li>
+<li>
+<p><strong>Run Tests and Benchmarks</strong></p>
+</li>
+<li><code>./build/Release/scheduler_test.exe</code> (Windows)</li>
+<li><code>./build/Release/scheduler_test</code> (Linux/macOS)</li>
+<li><code>./build/Release/scheduler_bench.exe</code> (Benchmarks)</li>
+</ol>
+<h2 id="understanding-the-structure">🎓 Understanding the Structure<a class="headerlink" href="#understanding-the-structure" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>async-task-scheduler/
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>├── setup.ps1              # Windows PowerShell setup
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>├── setup.sh               # macOS/Linux Bash setup
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>├── setup.js               # Cross-platform Node.js setup
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>├── launch.bat             # Windows batch launcher
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>├── CMakeLists.txt         # C++ build configuration
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>├── vcpkg.json             # C++ dependency manifest
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>├── ui/                    # Web dashboard (Node.js + React)
+<a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>│   ├── server/            # Express API server
+<a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>│   ├── client/            # React dashboard
+<a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a>│   └── package.json       # NPM workspace config
+<a id="__codelineno-38-12" name="__codelineno-38-12" href="#__codelineno-38-12"></a>├── src/                   # C++ source code
+<a id="__codelineno-38-13" name="__codelineno-38-13" href="#__codelineno-38-13"></a>├── include/scheduler/     # C++ headers
+<a id="__codelineno-38-14" name="__codelineno-38-14" href="#__codelineno-38-14"></a>├── tests/                 # Unit tests
+<a id="__codelineno-38-15" name="__codelineno-38-15" href="#__codelineno-38-15"></a>├── benchmarks/            # Performance benchmarks
+<a id="__codelineno-38-16" name="__codelineno-38-16" href="#__codelineno-38-16"></a>└── docs/                  # Documentation
+</code></pre></div>
+<h2 id="tips">💡 Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Speed Up Builds:</strong> The setup uses parallel compilation (<code>--parallel</code>). More cores = faster builds.</li>
+<li><strong>Skip Setup:</strong> If you've already built once, use <code>setup.ps1 -Mode run</code> to skip the build.</li>
+<li><strong>Clean Slate:</strong> Use <code>setup.ps1 -Mode clean</code> to remove all build artifacts before troubleshooting.</li>
+<li><strong>Verbose Builds:</strong> Remove <code>--silent</code> flags in setup scripts for detailed build output.</li>
+<li><strong>Check Logs:</strong> Look for errors in the terminal output; they usually indicate missing dependencies.</li>
+</ul>
+<h2 id="getting-help">📞 Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Check <a href="#-troubleshooting">Troubleshooting</a> section above</li>
+<li>Review <a href="../docs/integration-guide.md">docs/integration-guide.md</a> for integration issues</li>
+<li>Read <a href="../README.md">README.md</a> for project overview</li>
+<li>See <a href="../AGENTS.md">AGENTS.md</a> for AI assistant guidelines</li>
+</ul>
+<hr />
+<p><strong>Ready to schedule tasks?</strong> 🚀</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="c"># Windows</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="p">.\</span><span class="n">setup</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Mode</span> <span class="n">dev</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="c"># macOS/Linux</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="p">./</span><span class="n">setup</span><span class="p">.</span><span class="n">sh</span> <span class="n">dev</span>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="c"># Any platform</span>
+<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a><span class="n">node</span> <span class="n">setup</span><span class="p">.</span><span class="n">js</span> <span class="p">-</span><span class="n">-dev</span>
+</code></pre></div>
+<p>Then open http://localhost:3000 in your browser!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
