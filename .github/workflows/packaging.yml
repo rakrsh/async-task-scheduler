@@ -19,11 +19,17 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install vcpkg (if needed)
+      - name: Install vcpkg (Windows)
+        if: matrix.os == 'windows-latest'
+        run: |
+          git clone --depth 1 https://github.com/microsoft/vcpkg.git vcpkg || true
+          if (Test-Path .\vcpkg\bootstrap-vcpkg.bat) { .\vcpkg\bootstrap-vcpkg.bat }
+
+      - name: Install vcpkg (Linux/macOS)
+        if: matrix.os != 'windows-latest'
         run: |
           git clone --depth 1 https://github.com/microsoft/vcpkg.git vcpkg || true
           if [ -f ./vcpkg/bootstrap-vcpkg.sh ]; then ./vcpkg/bootstrap-vcpkg.sh; fi
-          if [ -f ./vcpkg/bootstrap-vcpkg.bat ]; then .\\vcpkg\\bootstrap-vcpkg.bat; fi
 
       - name: Install NSIS (Windows)
         if: matrix.os == 'windows-latest'
