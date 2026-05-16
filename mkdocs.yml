@@ -46,6 +46,9 @@ markdown_extensions:
 nav:
   - Home: index.md
   - User Guide: user-guide.md
+  - Dashboard:
+      - Overview: dashboard.md
+      - Integration Guide: integration-guide.md
   - API Reference:
       - Overview: api/index.md
       - scheduler::Scheduler: api/scheduler_scheduler.md

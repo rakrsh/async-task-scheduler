@@ -13,11 +13,13 @@ A thread-safe, work-stealing executor implemented in modern C++20. Designed for 
 - **Lock-Free Deques**: Optimized `WorkStealingDeque` for minimum contention between owners and stealers.
 - **Modern Memory Management**: Zero raw pointers; exclusively uses smart pointers and RAII.
 - **Performance Validated**: Integrated Google Benchmark suite for rigorous performance analysis.
+- **📊 Real-Time Dashboard**: Web-based UI for visualizing task queues, worker activity, and performance metrics.
 
 ## 📚 Documentation
 The documentation is available in a deployable format using **MkDocs**.
 
 - [**User Guide**](docs/user-guide.md): Detailed installation and usage.
+- [**Dashboard**](docs/dashboard.md): Real-time monitoring and visualization of tasks.
 - [**Architecture**](docs/architecture.md): Internal design and component overview.
 - [**AI Agent Manual**](docs/agent-manual.md): Guide for AI assistants.
 
@@ -28,6 +30,15 @@ pip install -r docs/requirements.txt
 mkdocs serve
 ```
 Then open `http://127.0.0.1:8000` in your browser.
+
+### Running the Dashboard
+To run the real-time task visualization dashboard:
+```powershell
+cd ui
+npm install
+npm run dev
+```
+The dashboard will be available at `http://localhost:3000`
 
 ### Building for Deployment
 ```powershell
