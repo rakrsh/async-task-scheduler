@@ -21,41 +21,57 @@ jobs:
 
       - name: Install vcpkg (Windows)
         if: matrix.os == 'windows-latest'
+        shell: bash
         run: |
           git clone --depth 1 https://github.com/microsoft/vcpkg.git vcpkg || true
+          
+      - name: Bootstrap vcpkg (Windows)
+        if: matrix.os == 'windows-latest'
+        shell: powershell
+        run: |
           if (Test-Path .\vcpkg\bootstrap-vcpkg.bat) { .\vcpkg\bootstrap-vcpkg.bat }
 
       - name: Install vcpkg (Linux/macOS)
         if: matrix.os != 'windows-latest'
+        shell: bash
         run: |
           git clone --depth 1 https://github.com/microsoft/vcpkg.git vcpkg || true
           if [ -f ./vcpkg/bootstrap-vcpkg.sh ]; then ./vcpkg/bootstrap-vcpkg.sh; fi
 
       - name: Install NSIS (Windows)
         if: matrix.os == 'windows-latest'
+        shell: powershell
         run: |
           choco install nsis -y
-          where makensis
+          $makensis = Get-Command makensis -ErrorAction SilentlyContinue
+          if ($makensis) { Write-Host "NSIS installed: $($makensis.Path)" } else { Write-Host "NSIS may not be in PATH, continuing..." }
 
       - name: Build C++ project (CMake)
+        shell: bash
         run: |
           cmake -B build -S . -DCMAKE_BUILD_TYPE=Release || true
           cmake --build build --config Release --parallel || true
 
       - name: Build UI
+        shell: bash
         run: |
           cd ui
           npm ci --no-audit --no-fund
           npm run build --workspace=client || npm --prefix client run build
 
-      - name: Package artifacts
+      - name: Package artifacts (Windows)
+        if: matrix.os == 'windows-latest'
+        shell: powershell
+        run: |
+          New-Item -ItemType Directory -Path dist -Force | Out-Null
+          & .\\packaging\\windows\\package.ps1 -BuildDir build -UiDir ui -OutDir dist
+
+      - name: Package artifacts (Linux/macOS)
+        if: matrix.os != 'windows-latest'
+        shell: bash
         run: |
           mkdir -p dist
-          if [ "${{ matrix.os }}" = "windows-latest" ]; then
-            powershell -ExecutionPolicy Bypass -File .\\packaging\\windows\\package.ps1 -BuildDir build -UiDir ui -OutDir dist
-          else
-            bash packaging/package.sh $(pwd)/build $(pwd)/ui dist
-          fi
+          bash packaging/package.sh $(pwd)/build $(pwd)/ui dist
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4

@@ -97,3 +97,8 @@ venv/
 *.sln
 *.vcxproj
 *.filters
+
+# Misc
+vcpkg
+vcpkg/
+vcpkg_installed/
