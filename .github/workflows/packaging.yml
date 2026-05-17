@@ -43,7 +43,8 @@ jobs:
         shell: powershell
         run: |
           choco install nsis -y
-          Get-Command makensis
+          $makensis = Get-Command makensis -ErrorAction SilentlyContinue
+          if ($makensis) { Write-Host "NSIS installed: $($makensis.Path)" } else { Write-Host "NSIS may not be in PATH, continuing..." }
 
       - name: Build C++ project (CMake)
         shell: bash
