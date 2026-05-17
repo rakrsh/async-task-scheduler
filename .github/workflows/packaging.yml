@@ -23,7 +23,7 @@ jobs:
         if: matrix.os == 'windows-latest'
         shell: powershell
         run: |
-          git clone --depth 1 https://github.com/microsoft/vcpkg.git vcpkg -ErrorAction SilentlyContinue
+          git clone --depth 1 https://github.com/microsoft/vcpkg.git vcpkg 2>$null; $true
           if (Test-Path .\vcpkg\bootstrap-vcpkg.bat) { .\vcpkg\bootstrap-vcpkg.bat }
 
       - name: Install vcpkg (Linux/macOS)
