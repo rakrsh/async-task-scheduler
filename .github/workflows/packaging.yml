@@ -49,6 +49,7 @@ jobs:
           npm run build --workspace=client || npm --prefix client run build
 
       - name: Package artifacts
+        shell: bash
         run: |
           mkdir -p dist
           if [ "${{ matrix.os }}" = "windows-latest" ]; then
